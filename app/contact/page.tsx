@@ -14,7 +14,7 @@ export default function ContactPage() {
       </header>
 
       <form
-        action="https://formspree.io/f/[PLACEHOLDER_ID]"
+        action="https://formspree.io/f/mpqjklyj"
         method="POST"
         className="space-y-6"
       >
