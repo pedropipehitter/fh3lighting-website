@@ -53,6 +53,14 @@ export default function Nav() {
               IG
             </a>
             <a
+              href="https://instagram.com/fh3.lx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-neutral-500 hover:text-violet-400 transition-colors"
+            >
+              IG LX
+            </a>
+            <a
               href="mailto:FH3@franciscohermosilloiii.com"
               className="text-xs text-neutral-500 hover:text-violet-400 transition-colors"
             >
