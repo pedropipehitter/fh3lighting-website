@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const sections = [
@@ -27,8 +28,16 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative flex items-center justify-center min-h-[90vh] border-b border-neutral-800">
-        <div className="absolute inset-0 bg-gradient-to-b from-violet-950/20 via-transparent to-[#0a0a0a]" />
+      <section className="relative flex items-center justify-center min-h-[90vh] border-b border-neutral-800 overflow-hidden">
+        <Image
+          src="/images/SNOTL129.jpg"
+          alt="Theatrical production lighting"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-violet-950/40 to-[#0a0a0a]" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <p className="text-xs font-mono tracking-[0.3em] text-violet-400 uppercase mb-6">
             Lighting Designer · Programmer · Production Photographer

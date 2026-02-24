@@ -2,7 +2,7 @@
 
 ## Before going live
 
-- [ ] **Resume PDF** — drop `resume.pdf` into `public/` and push to main
+- [x] **Resume PDF** — drop `resume.pdf` into `public/` and push to main
   ```bash
   cp /path/to/resume.pdf /root/fh3lighting-website/public/resume.pdf
   cd /root/fh3lighting-website && git add public/resume.pdf && git commit -m "Add resume PDF" && git push
@@ -22,5 +22,5 @@
 ## Nice to have
 
 - [ ] **Individual photography gallery pages** — currently show a 6-placeholder grid. Add real photos per project once Francisco supplies them (or scrape sub-pages from Squarespace gallery pages)
-- [ ] **Hero image** — homepage hero is a gradient placeholder. Could use one of the show photos as a full-bleed background
-- [ ] **Mobile nav** — current nav wraps on small screens; could collapse into a hamburger menu
+- [x] **Hero image** — homepage hero is a gradient placeholder. Could use one of the show photos as a full-bleed background
+- [x] **Mobile nav** — current nav wraps on small screens; could collapse into a hamburger menu
