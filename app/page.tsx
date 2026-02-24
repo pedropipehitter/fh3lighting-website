@@ -37,7 +37,7 @@ export default function Home() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/60 via-[#1a1400]/50 to-[#121212]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/60 via-[#1a1400]/60 to-[#121212]" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <p className="text-xs font-mono tracking-[0.3em] text-[#FFCC00] uppercase mb-6">
             Lighting Designer · Programmer · Production Photographer
