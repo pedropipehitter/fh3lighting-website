@@ -26,7 +26,7 @@ export default async function PhotoProjectPage({ params }: { params: Promise<{ s
     <div className="max-w-5xl mx-auto px-6 py-20">
       <Link
         href="/production-photography"
-        className="text-xs font-mono text-neutral-500 hover:text-violet-400 transition-colors tracking-widest uppercase mb-10 inline-block"
+        className="text-xs font-mono text-neutral-500 hover:text-[#1e90ff] transition-colors tracking-widest uppercase mb-10 inline-block"
       >
         ← Production Photography
       </Link>
