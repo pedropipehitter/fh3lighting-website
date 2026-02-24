@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { photoProjects } from "@/lib/photography";
 
 export const metadata = {
@@ -23,10 +24,19 @@ export default function ProductionPhotographyPage() {
             href={`/production-photography/${project.slug}`}
             className="group bg-[#0a0a0a] hover:bg-neutral-900 transition-colors"
           >
-            <div className="aspect-[4/3] bg-neutral-900 relative overflow-hidden flex items-center justify-center">
-              <span className="text-neutral-700 font-mono text-xs group-hover:text-neutral-600 transition-colors">
-                {project.company}
-              </span>
+            <div className="aspect-[4/3] bg-neutral-900 relative overflow-hidden">
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-neutral-700 font-mono text-xs">{project.company}</span>
+                </div>
+              )}
             </div>
             <div className="p-5">
               <h2 className="text-sm font-medium text-white group-hover:text-violet-400 transition-colors mb-1">

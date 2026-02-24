@@ -30,6 +30,7 @@ export const shows: Show[] = [
     role: "Assistant Lighting Designer",
     venue: "Alley Theatre",
     year: 2024,
+    image: "/images/Alley-Theatre-The-Nerd-Lynn-Lane-1.jpg",
   },
   {
     slug: "a-christmas-carol",
@@ -45,6 +46,7 @@ export const shows: Show[] = [
     role: "Assistant Lighting Designer",
     venue: "Alley Theatre",
     year: 2023,
+    image: "/images/Alley_Theatre_Little_Comedies_Photographer_Lynn_Lane-346-scaled.jpg",
   },
   {
     slug: "american-mariachi",
@@ -60,7 +62,7 @@ export const shows: Show[] = [
     role: "Lighting Designer",
     venue: "Nebraska Repertory Theatre",
     year: 2023,
-    image: "/images/05022023-LNK-TPTGW-FH3-66.JPG",
+    image: "/images/05022023-LNK_TPTGW-FH3-66.JPG",
   },
   {
     slug: "holiday-inn",
@@ -92,6 +94,7 @@ export const shows: Show[] = [
     role: "Assistant Lighting Designer",
     venue: "Opera Omaha",
     year: 2022,
+    image: "/images/IMG_2856.JPG",
   },
   {
     slug: "our-town",
@@ -99,6 +102,7 @@ export const shows: Show[] = [
     role: "Assistant Lighting Designer",
     venue: "Nebraska Repertory Theatre",
     year: 2022,
+    image: "/images/FH3-OT-01.JPG",
   },
   {
     slug: "traveling-shoes",
@@ -114,6 +118,7 @@ export const shows: Show[] = [
     role: "Lighting Designer",
     venue: "UNL",
     year: 2021,
+    image: "/images/20210308_213300325_iOS.jpg",
   },
   {
     slug: "tmfd-department-installation",
@@ -121,6 +126,7 @@ export const shows: Show[] = [
     role: "Lighting Designer",
     venue: "UNL",
     year: 2021,
+    image: "/images/IMG_0216.JPG",
   },
   {
     slug: "student-dance-projects",
@@ -128,5 +134,6 @@ export const shows: Show[] = [
     role: "Lighting Designer",
     venue: "UNL",
     year: 2021,
+    image: "/images/IMG_8890.JPG",
   },
 ];
