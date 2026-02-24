@@ -45,8 +45,12 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
       )}
 
       <div className="border-t border-neutral-800 pt-10">
-        <h1 className="text-4xl font-light text-white mb-8">{show.title}</h1>
-        <dl className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <h1 className="text-4xl font-light text-white mb-2">{show.title}</h1>
+        {show.note && (
+          <p className="text-xs font-mono text-violet-400 mb-8">{show.note}</p>
+        )}
+        {!show.note && <div className="mb-8" />}
+        <dl className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
           <div>
             <dt className="text-xs font-mono text-neutral-600 uppercase tracking-widest mb-1">Role</dt>
             <dd className="text-neutral-300">{show.role}</dd>
@@ -54,12 +58,27 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
           <div>
             <dt className="text-xs font-mono text-neutral-600 uppercase tracking-widest mb-1">Venue</dt>
             <dd className="text-neutral-300">{show.venue}</dd>
+            <dd className="text-neutral-600 text-xs mt-0.5">{show.location}</dd>
           </div>
           <div>
             <dt className="text-xs font-mono text-neutral-600 uppercase tracking-widest mb-1">Year</dt>
             <dd className="text-neutral-300">{show.year}</dd>
           </div>
         </dl>
+
+        {show.collaborators && show.collaborators.length > 0 && (
+          <div className="border-t border-neutral-900 pt-8">
+            <p className="text-xs font-mono text-neutral-700 uppercase tracking-widest mb-4">Creative Team</p>
+            <ul className="space-y-1">
+              {show.collaborators.map((c) => (
+                <li key={c.role} className="flex gap-3 text-xs">
+                  <span className="text-neutral-700 w-40 shrink-0">{c.role}</span>
+                  <span className="text-neutral-500">{c.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
 
       <div className="flex justify-between mt-16 pt-8 border-t border-neutral-800">

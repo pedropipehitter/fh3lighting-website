@@ -94,6 +94,14 @@ export default function ContactPage() {
         >
           @PhotobyFH3 on Instagram
         </a>
+        <a
+          href="https://instagram.com/fh3.lx"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-neutral-400 hover:text-violet-400 transition-colors text-sm"
+        >
+          @fh3.lx on Instagram
+        </a>
       </div>
     </div>
   );
