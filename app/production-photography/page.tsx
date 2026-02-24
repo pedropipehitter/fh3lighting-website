@@ -10,7 +10,7 @@ export default function ProductionPhotographyPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-20">
       <header className="mb-16">
-        <p className="text-xs font-mono tracking-[0.3em] text-violet-400 uppercase mb-3">Portfolio</p>
+        <p className="text-xs font-mono tracking-[0.3em] text-[#5c7bc0] uppercase mb-3">Portfolio</p>
         <h1 className="text-4xl font-light text-white mb-4">Production Photography</h1>
         <p className="text-neutral-500 text-sm">
           Work published in LA Times, LiveDesign Magazine, and Thornton Wilder Journal.
@@ -22,7 +22,7 @@ export default function ProductionPhotographyPage() {
           <Link
             key={project.slug}
             href={`/production-photography/${project.slug}`}
-            className="group bg-[#0a0a0a] hover:bg-neutral-900 transition-colors"
+            className="group bg-[#070b14] hover:bg-neutral-900 transition-colors"
           >
             <div className="aspect-[4/3] bg-neutral-900 relative overflow-hidden">
               {project.image ? (
@@ -39,7 +39,7 @@ export default function ProductionPhotographyPage() {
               )}
             </div>
             <div className="p-5">
-              <h2 className="text-sm font-medium text-white group-hover:text-violet-400 transition-colors mb-1">
+              <h2 className="text-sm font-medium text-white group-hover:text-[#5c7bc0] transition-colors mb-1">
                 {project.title}
               </h2>
               <p className="text-xs text-neutral-500">{project.company}</p>

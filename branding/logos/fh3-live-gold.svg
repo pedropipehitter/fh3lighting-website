@@ -1,0 +1,7 @@
+<svg width="400" height="150" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="150" fill="#121212"/>
+  <rect x="20" y="30" width="360" height="90" rx="4" fill="none" stroke="#FFCC00" stroke-width="2"/>
+  <text x="40" y="92" font-family="monospace" font-size="44" font-weight="bold" fill="#FFCC00">
+    FH3_Lighting
+  </text>
+</svg>

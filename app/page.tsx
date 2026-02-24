@@ -37,9 +37,9 @@ export default function Home() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-violet-950/40 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#070b14]/60 via-[#0a1428]/60 to-[#070b14]" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-          <p className="text-xs font-mono tracking-[0.3em] text-violet-400 uppercase mb-6">
+          <p className="text-xs font-mono tracking-[0.3em] text-[#5c7bc0] uppercase mb-6">
             Lighting Designer · Programmer · Production Photographer
           </p>
           <h1 className="text-5xl sm:text-7xl font-light tracking-tight text-white mb-6">
@@ -52,7 +52,7 @@ export default function Home() {
           <div className="flex gap-4 justify-center flex-wrap">
             <Link
               href="/lighting-design"
-              className="px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white text-sm tracking-wide transition-colors"
+              className="px-6 py-3 bg-[#5c7bc0] hover:bg-[#6d8fd4] text-white text-sm tracking-wide transition-colors"
             >
               View Work
             </Link>
@@ -73,13 +73,13 @@ export default function Home() {
             <Link
               key={href}
               href={href}
-              className="group bg-[#0a0a0a] p-10 hover:bg-neutral-900 transition-colors"
+              className="group bg-[#070b14] p-10 hover:bg-neutral-900 transition-colors"
             >
-              <h2 className="text-xl font-light text-white mb-3 group-hover:text-violet-400 transition-colors">
+              <h2 className="text-xl font-light text-white mb-3 group-hover:text-[#5c7bc0] transition-colors">
                 {title}
               </h2>
               <p className="text-sm text-neutral-500 leading-relaxed">{description}</p>
-              <span className="inline-block mt-6 text-xs font-mono text-violet-600 group-hover:text-violet-400 transition-colors tracking-widest">
+              <span className="inline-block mt-6 text-xs font-mono text-[#5c7bc0] group-hover:text-[#5c7bc0] transition-colors tracking-widest">
                 EXPLORE →
               </span>
             </Link>

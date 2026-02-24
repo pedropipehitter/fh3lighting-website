@@ -18,7 +18,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-neutral-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#070b14]/90 backdrop-blur-sm border-b border-neutral-800">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-sm font-mono tracking-widest text-neutral-400 hover:text-white transition-colors uppercase">
           FH3
@@ -32,7 +32,7 @@ export default function Nav() {
               href={href}
               className={`text-xs tracking-wide transition-colors ${
                 pathname === href
-                  ? "text-violet-400"
+                  ? "text-[#5c7bc0]"
                   : "text-neutral-400 hover:text-white"
               }`}
             >
@@ -52,7 +52,7 @@ export default function Nav() {
               href="https://instagram.com/PhotobyFH3"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-neutral-500 hover:text-violet-400 transition-colors"
+              className="text-xs text-neutral-500 hover:text-[#5c7bc0] transition-colors"
             >
               IG
             </a>
@@ -60,13 +60,13 @@ export default function Nav() {
               href="https://instagram.com/fh3.lx"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-neutral-500 hover:text-violet-400 transition-colors"
+              className="text-xs text-neutral-500 hover:text-[#5c7bc0] transition-colors"
             >
               IG LX
             </a>
             <a
               href="mailto:FH3@franciscohermosilloiii.com"
-              className="text-xs text-neutral-500 hover:text-violet-400 transition-colors"
+              className="text-xs text-neutral-500 hover:text-[#5c7bc0] transition-colors"
             >
               Email
             </a>
@@ -99,7 +99,7 @@ export default function Nav() {
               href={href}
               onClick={() => setOpen(false)}
               className={`text-sm tracking-wide transition-colors ${
-                pathname === href ? "text-violet-400" : "text-neutral-400 hover:text-white"
+                pathname === href ? "text-[#5c7bc0]" : "text-neutral-400 hover:text-white"
               }`}
             >
               {label}
@@ -114,9 +114,9 @@ export default function Nav() {
             Resume
           </a>
           <div className="flex gap-4 pt-2 border-t border-neutral-800">
-            <a href="https://instagram.com/PhotobyFH3" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-violet-400 transition-colors">IG</a>
-            <a href="https://instagram.com/fh3.lx" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-violet-400 transition-colors">IG LX</a>
-            <a href="mailto:FH3@franciscohermosilloiii.com" className="text-xs text-neutral-500 hover:text-violet-400 transition-colors">Email</a>
+            <a href="https://instagram.com/PhotobyFH3" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-[#5c7bc0] transition-colors">IG</a>
+            <a href="https://instagram.com/fh3.lx" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-[#5c7bc0] transition-colors">IG LX</a>
+            <a href="mailto:FH3@franciscohermosilloiii.com" className="text-xs text-neutral-500 hover:text-[#5c7bc0] transition-colors">Email</a>
           </div>
         </div>
       </div>

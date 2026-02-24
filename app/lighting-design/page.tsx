@@ -6,7 +6,7 @@ export default function LightingDesignPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-20">
       <header className="mb-16">
-        <p className="text-xs font-mono tracking-[0.3em] text-violet-400 uppercase mb-3">Portfolio</p>
+        <p className="text-xs font-mono tracking-[0.3em] text-[#5c7bc0] uppercase mb-3">Portfolio</p>
         <h1 className="text-4xl font-light text-white">Lighting Design</h1>
       </header>
 
@@ -15,7 +15,7 @@ export default function LightingDesignPage() {
           <Link
             key={show.slug}
             href={`/lighting-design/${show.slug}`}
-            className="group bg-[#0a0a0a] hover:bg-neutral-900 transition-colors"
+            className="group bg-[#070b14] hover:bg-neutral-900 transition-colors"
           >
             <div className="aspect-[4/3] bg-neutral-900 relative overflow-hidden">
               {show.image ? (
@@ -32,7 +32,7 @@ export default function LightingDesignPage() {
               )}
             </div>
             <div className="p-5">
-              <h2 className="text-sm font-medium text-white group-hover:text-violet-400 transition-colors mb-1">
+              <h2 className="text-sm font-medium text-white group-hover:text-[#5c7bc0] transition-colors mb-1">
                 {show.title}
               </h2>
               <p className="text-xs text-neutral-500">{show.role}</p>

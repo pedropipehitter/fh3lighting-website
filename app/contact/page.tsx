@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <div className="max-w-2xl mx-auto px-6 py-20">
       <header className="mb-16">
-        <p className="text-xs font-mono tracking-[0.3em] text-violet-400 uppercase mb-3">Contact</p>
+        <p className="text-xs font-mono tracking-[0.3em] text-[#5c7bc0] uppercase mb-3">Contact</p>
         <h1 className="text-4xl font-light text-white mb-4">Get in Touch</h1>
         <p className="text-neutral-400">
           Available for lighting design, programming, and production photography projects.
@@ -28,7 +28,7 @@ export default function ContactPage() {
               name="name"
               type="text"
               required
-              className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-violet-600 transition-colors"
+              className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-[#5c7bc0] transition-colors"
             />
           </div>
           <div>
@@ -40,7 +40,7 @@ export default function ContactPage() {
               name="email"
               type="email"
               required
-              className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-violet-600 transition-colors"
+              className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-[#5c7bc0] transition-colors"
             />
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function ContactPage() {
             id="subject"
             name="subject"
             type="text"
-            className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-violet-600 transition-colors"
+            className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-[#5c7bc0] transition-colors"
           />
         </div>
 
@@ -66,13 +66,13 @@ export default function ContactPage() {
             name="message"
             required
             rows={6}
-            className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-violet-600 transition-colors resize-none"
+            className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-[#5c7bc0] transition-colors resize-none"
           />
         </div>
 
         <button
           type="submit"
-          className="px-8 py-3 bg-violet-600 hover:bg-violet-500 text-white text-sm tracking-wide transition-colors"
+          className="px-8 py-3 bg-[#5c7bc0] hover:bg-[#6d8fd4] text-white text-sm tracking-wide transition-colors"
         >
           Send Message
         </button>
@@ -82,7 +82,7 @@ export default function ContactPage() {
         <p className="text-xs font-mono text-neutral-600 uppercase tracking-widest mb-4">Direct</p>
         <a
           href="mailto:FH3@franciscohermosilloiii.com"
-          className="block text-neutral-400 hover:text-violet-400 transition-colors text-sm"
+          className="block text-neutral-400 hover:text-[#5c7bc0] transition-colors text-sm"
         >
           FH3@franciscohermosilloiii.com
         </a>
@@ -90,7 +90,7 @@ export default function ContactPage() {
           href="https://instagram.com/PhotobyFH3"
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-neutral-400 hover:text-violet-400 transition-colors text-sm"
+          className="block text-neutral-400 hover:text-[#5c7bc0] transition-colors text-sm"
         >
           @PhotobyFH3 on Instagram
         </a>

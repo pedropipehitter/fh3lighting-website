@@ -8,7 +8,7 @@ export default function LightingProgrammingPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-20">
       <header className="mb-16">
-        <p className="text-xs font-mono tracking-[0.3em] text-violet-400 uppercase mb-3">Credits</p>
+        <p className="text-xs font-mono tracking-[0.3em] text-[#5c7bc0] uppercase mb-3">Credits</p>
         <h1 className="text-4xl font-light text-white mb-6">Lighting Programming</h1>
         <p className="text-neutral-400 max-w-2xl leading-relaxed">
           Experienced with ETC Eos family (APEX, GIO, TI, Ion XE), MA2, and beyond.
@@ -42,7 +42,7 @@ export default function LightingProgrammingPage() {
       </div>
 
       <div className="border border-neutral-800 p-8 bg-neutral-900/30">
-        <p className="text-xs font-mono text-violet-400 uppercase tracking-widest mb-4">Confidential Work</p>
+        <p className="text-xs font-mono text-[#5c7bc0] uppercase tracking-widest mb-4">Confidential Work</p>
         <p className="text-neutral-400 leading-relaxed">
           I work regularly on high-profile private and corporate events — major sporting events, exclusive galas,
           and private performances. These projects require strict confidentiality; I&apos;m well-practiced at operating

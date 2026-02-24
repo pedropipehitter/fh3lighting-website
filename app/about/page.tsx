@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-20">
       <header className="mb-16">
-        <p className="text-xs font-mono tracking-[0.3em] text-violet-400 uppercase mb-3">About</p>
+        <p className="text-xs font-mono tracking-[0.3em] text-[#5c7bc0] uppercase mb-3">About</p>
         <h1 className="text-4xl font-light text-white">Francisco Hermosillo III</h1>
       </header>
 
@@ -92,7 +92,7 @@ export default function AboutPage() {
       <div className="border-t border-neutral-800 pt-12 flex gap-4 flex-wrap">
         <Link
           href="/contact"
-          className="px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white text-sm tracking-wide transition-colors"
+          className="px-6 py-3 bg-[#5c7bc0] hover:bg-[#6d8fd4] text-white text-sm tracking-wide transition-colors"
         >
           Get in Touch
         </Link>
