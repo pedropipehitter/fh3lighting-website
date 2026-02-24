@@ -1,65 +1,82 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const sections = [
+  {
+    href: "/lighting-design",
+    title: "Lighting Design",
+    description: "16 productions — regional theatre, opera, and dance across the country.",
+  },
+  {
+    href: "/lighting-programming",
+    title: "Lighting Programming",
+    description: "Programming credits on Broadway-adjacent and major-venue productions.",
+  },
+  {
+    href: "/production-photography",
+    title: "Production Photography",
+    description: "15 projects — work published in LA Times and LiveDesign Magazine.",
+  },
+  {
+    href: "/about",
+    title: "About",
+    description: "MFA Lighting Design, UNL. Freelance designer and photographer, NYC.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen">
+      {/* Hero */}
+      <section className="relative flex items-center justify-center min-h-[90vh] border-b border-neutral-800">
+        <div className="absolute inset-0 bg-gradient-to-b from-violet-950/20 via-transparent to-[#0a0a0a]" />
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+          <p className="text-xs font-mono tracking-[0.3em] text-violet-400 uppercase mb-6">
+            Lighting Designer · Programmer · Production Photographer
           </p>
+          <h1 className="text-5xl sm:text-7xl font-light tracking-tight text-white mb-6">
+            Francisco Hermosillo III
+          </h1>
+          <p className="text-neutral-400 text-lg leading-relaxed mb-10">
+            Freelance lighting designer, programmer, and production photographer based in NYC.
+            Designing for theatre, opera, dance, and live entertainment.
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link
+              href="/lighting-design"
+              className="px-6 py-3 bg-violet-600 hover:bg-violet-500 text-white text-sm tracking-wide transition-colors"
+            >
+              View Work
+            </Link>
+            <Link
+              href="/contact"
+              className="px-6 py-3 border border-neutral-700 hover:border-neutral-500 text-neutral-300 hover:text-white text-sm tracking-wide transition-colors"
+            >
+              Get in Touch
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Section cards */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-neutral-800">
+          {sections.map(({ href, title, description }) => (
+            <Link
+              key={href}
+              href={href}
+              className="group bg-[#0a0a0a] p-10 hover:bg-neutral-900 transition-colors"
+            >
+              <h2 className="text-xl font-light text-white mb-3 group-hover:text-violet-400 transition-colors">
+                {title}
+              </h2>
+              <p className="text-sm text-neutral-500 leading-relaxed">{description}</p>
+              <span className="inline-block mt-6 text-xs font-mono text-violet-600 group-hover:text-violet-400 transition-colors tracking-widest">
+                EXPLORE →
+              </span>
+            </Link>
+          ))}
         </div>
-      </main>
+      </section>
     </div>
   );
 }

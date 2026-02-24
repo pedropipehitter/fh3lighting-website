@@ -1,0 +1,42 @@
+import Link from "next/link";
+import { photoProjects } from "@/lib/photography";
+
+export const metadata = {
+  title: "Production Photography — Francisco Hermosillo III",
+};
+
+export default function ProductionPhotographyPage() {
+  return (
+    <div className="max-w-7xl mx-auto px-6 py-20">
+      <header className="mb-16">
+        <p className="text-xs font-mono tracking-[0.3em] text-violet-400 uppercase mb-3">Portfolio</p>
+        <h1 className="text-4xl font-light text-white mb-4">Production Photography</h1>
+        <p className="text-neutral-500 text-sm">
+          Work published in LA Times, LiveDesign Magazine, and Thornton Wilder Journal.
+        </p>
+      </header>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-800">
+        {photoProjects.map((project) => (
+          <Link
+            key={project.slug}
+            href={`/production-photography/${project.slug}`}
+            className="group bg-[#0a0a0a] hover:bg-neutral-900 transition-colors"
+          >
+            <div className="aspect-[4/3] bg-neutral-900 relative overflow-hidden flex items-center justify-center">
+              <span className="text-neutral-700 font-mono text-xs group-hover:text-neutral-600 transition-colors">
+                {project.company}
+              </span>
+            </div>
+            <div className="p-5">
+              <h2 className="text-sm font-medium text-white group-hover:text-violet-400 transition-colors mb-1">
+                {project.title}
+              </h2>
+              <p className="text-xs text-neutral-500">{project.company}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
