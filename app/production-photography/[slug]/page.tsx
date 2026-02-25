@@ -1,5 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { absoluteUrl } from "@/lib/seo";
 import { photoProjects } from "@/lib/photography";
 import GalleryGrid from "@/components/GalleryGrid";
 
@@ -7,11 +9,33 @@ export function generateStaticParams() {
   return photoProjects.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const project = photoProjects.find((p) => p.slug === slug);
   if (!project) return {};
-  return { title: `${project.title} — Francisco Hermosillo III` };
+  const description = `${project.title} production photography for ${project.company}.`;
+  const imageUrl = project.image ? absoluteUrl(project.image) : absoluteUrl("/images/SNOTL129.jpg");
+
+  return {
+    title: project.title,
+    description,
+    alternates: {
+      canonical: `/production-photography/${project.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      url: `/production-photography/${project.slug}`,
+      title: `${project.title} — Francisco Hermosillo III`,
+      description,
+      images: [imageUrl],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Francisco Hermosillo III`,
+      description,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function PhotoProjectPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -1,6 +1,28 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { absoluteUrl } from "@/lib/seo";
 import { shows } from "@/lib/shows";
+
+export const metadata: Metadata = {
+  title: "Lighting Design",
+  description: "Lighting design portfolio featuring regional theatre, opera, dance, and live entertainment work.",
+  alternates: {
+    canonical: "/lighting-design",
+  },
+  openGraph: {
+    url: "/lighting-design",
+    title: "Lighting Design — Francisco Hermosillo III",
+    description: "Lighting design portfolio featuring regional theatre, opera, dance, and live entertainment work.",
+    images: [absoluteUrl("/images/SNOTL129.jpg")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lighting Design — Francisco Hermosillo III",
+    description: "Lighting design portfolio featuring regional theatre, opera, dance, and live entertainment work.",
+    images: [absoluteUrl("/images/SNOTL129.jpg")],
+  },
+};
 
 export default function LightingDesignPage() {
   return (

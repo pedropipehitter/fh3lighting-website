@@ -1,17 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { absoluteUrl } from "@/lib/seo";
 import { shows } from "@/lib/shows";
 
 export function generateStaticParams() {
   return shows.map((show) => ({ slug: show.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const show = shows.find((s) => s.slug === slug);
   if (!show) return {};
-  return { title: `${show.title} — Francisco Hermosillo III` };
+  const description = `${show.role} for ${show.title} at ${show.venue} in ${show.location} (${show.year}).`;
+  const imageUrl = show.image ? absoluteUrl(show.image) : absoluteUrl("/images/SNOTL129.jpg");
+
+  return {
+    title: show.title,
+    description,
+    alternates: {
+      canonical: `/lighting-design/${show.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      url: `/lighting-design/${show.slug}`,
+      title: `${show.title} — Francisco Hermosillo III`,
+      description,
+      images: [imageUrl],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${show.title} — Francisco Hermosillo III`,
+      description,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function ShowPage({ params }: { params: Promise<{ slug: string }> }) {

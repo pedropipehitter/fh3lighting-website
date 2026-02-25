@@ -1,9 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { absoluteUrl } from "@/lib/seo";
 import { photoProjects } from "@/lib/photography";
 
-export const metadata = {
-  title: "Production Photography — Francisco Hermosillo III",
+export const metadata: Metadata = {
+  title: "Production Photography",
+  description: "Production photography portfolio with theatre and live performance image galleries.",
+  alternates: {
+    canonical: "/production-photography",
+  },
+  openGraph: {
+    url: "/production-photography",
+    title: "Production Photography — Francisco Hermosillo III",
+    description: "Production photography portfolio with theatre and live performance image galleries.",
+    images: [absoluteUrl("/images/121324-LNK-NUTCRACKER-FH3-12.JPG")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Production Photography — Francisco Hermosillo III",
+    description: "Production photography portfolio with theatre and live performance image galleries.",
+    images: [absoluteUrl("/images/121324-LNK-NUTCRACKER-FH3-12.JPG")],
+  },
 };
 
 export default function ProductionPhotographyPage() {

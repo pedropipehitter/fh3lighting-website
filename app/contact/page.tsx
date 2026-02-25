@@ -1,5 +1,26 @@
-export const metadata = {
-  title: "Contact — Francisco Hermosillo III",
+import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contact Francisco Hermosillo III for lighting design, programming, and production photography work.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    url: "/contact",
+    title: "Contact — Francisco Hermosillo III",
+    description:
+      "Contact Francisco Hermosillo III for lighting design, programming, and production photography work.",
+    images: [absoluteUrl("/images/SNOTL129.jpg")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact — Francisco Hermosillo III",
+    description:
+      "Contact Francisco Hermosillo III for lighting design, programming, and production photography work.",
+    images: [absoluteUrl("/images/SNOTL129.jpg")],
+  },
 };
 
 export default function ContactPage() {
