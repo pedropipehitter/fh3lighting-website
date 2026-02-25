@@ -1,26 +1,64 @@
 # TODO — fh3lighting-website
 
-## Before going live
+## Workflow note (going forward)
 
-- [x] **Resume PDF** — drop `resume.pdf` into `public/` and push to main
-  ```bash
-  cp /path/to/resume.pdf /root/fh3lighting-website/public/resume.pdf
-  cd /root/fh3lighting-website && git add public/resume.pdf && git commit -m "Add resume PDF" && git push
-  ```
+- [ ] **Branch-first feature workflow** — for every new feature/improvement:
+  - Plan in detail on `todos` first.
+  - Create a new feature branch from `main`.
+  - Implement only on that feature branch.
+  - Open PR and merge after review.
 
-- [ ] **DNS cutover** — point `franciscohermosilloiii.com` to Vercel
-  - In Squarespace DNS (or Cloudflare if transferred): set A record `@` → `76.76.21.21` and CNAME `www` → `cname.vercel-dns.com`
-  - In Vercel project → Settings → Domains → add `franciscohermosilloiii.com`
-  - Then cancel Squarespace hosting plan (keep domain-only if still registered there)
+## Prioritized roadmap (with effort)
 
-- [x] **Verify 3 possibly mismatched show images** — these were assigned by page position, not filename, so Francisco should confirm:
-  - Eugene Onegin → `IMG_2856.JPG`
-  - TMFD Department Installation → `IMG_0216.JPG`
-  - Student Dance Projects → `IMG_8890.JPG`
-  - To swap: replace the `image:` value in `lib/shows.ts` and push
+### P0 — Launch blockers (must complete before go-live)
 
-## Nice to have
+- [ ] **Fix current lint failure in About page** — escape apostrophe in `app/about/page.tsx`  
+  Effort: **XS (10–15 min)**
 
-- [x] **Individual photography gallery pages** — currently show a 6-placeholder grid. Add real photos per project once Francisco supplies them (or scrape sub-pages from Squarespace gallery pages)
-- [x] **Hero image** — homepage hero is a gradient placeholder. Could use one of the show photos as a full-bleed background
-- [x] **Mobile nav** — current nav wraps on small screens; could collapse into a hamburger menu
+- [ ] **Finalize and merge typography alignment branch** (`squarespace-font-alignment`) to `main` after visual QA  
+  Effort: **S (30–60 min)**
+
+- [ ] **DNS cutover + domain verification** — point `franciscohermosilloiii.com` to Vercel and verify SSL  
+  Effort: **M (1–2 hrs including propagation checks)**
+
+### P1 — Core optimization (high impact)
+
+- [ ] **SEO baseline** — add/expand metadata across pages:
+  - `metadataBase`, canonical URLs, OpenGraph, Twitter card tags
+  - Per-page/per-project descriptions
+  - Add `app/sitemap.ts` and `app/robots.ts`  
+  Effort: **M (2–4 hrs)**
+
+- [ ] **Image performance pass**:
+  - Add/verify `sizes` for all major `next/image` usage
+  - Optimize local assets (convert heavy JPGs where practical)
+  - Remove duplicate unused file `public/images/05022023-LNK-TPTGW-FH3-66.JPG`  
+  Effort: **M (3–5 hrs)**
+
+- [ ] **Accessibility pass (navigation + forms + lightbox)**:
+  - Add focus-visible styles for interactive elements
+  - Add dialog semantics/focus handling to `GalleryGrid` modal
+  - Re-test keyboard navigation and labels  
+  Effort: **M (3–5 hrs)**
+
+### P2 — Quality, stability, and maintainability
+
+- [ ] **CI quality gates** — run lint/build on PRs before merge  
+  Effort: **S (1–2 hrs)**
+
+- [ ] **Lighthouse baseline and budget targets** (mobile + desktop)  
+  Effort: **S (1–2 hrs)**
+
+- [ ] **Content update workflow** — define how new projects/credits are added (schema + checklist)  
+  Effort: **M (2–4 hrs)**
+
+### P3 — Post-launch growth features
+
+- [ ] **Analytics events** — track CTA clicks, resume download, contact form submit  
+  Effort: **S (1–3 hrs)**
+
+- [ ] **Homepage featured work module** — highlight 3–4 key projects for faster conversion  
+  Effort: **M (3–6 hrs)**
+
+- [ ] **Optional content CMS path** — evaluate JSON/MDX vs lightweight headless CMS  
+  Effort: **L (1–2 days, depending on choice)**
