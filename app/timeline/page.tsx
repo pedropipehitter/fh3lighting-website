@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { shows } from "@/lib/shows";
 import { programmingCredits } from "@/lib/programming";
+import { photoProjects } from "@/lib/photography";
 import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ interface Entry {
   venue: string;
   year: number;
   href?: string;
-  category: "design" | "programming";
+  category: "design" | "programming" | "photography";
 }
 
 function buildEntries(): Entry[] {
@@ -47,7 +48,18 @@ function buildEntries(): Entry[] {
       category: "programming",
     }));
 
-  return [...design, ...programming];
+  const photography: Entry[] = photoProjects
+    .filter((p) => !!p.year)
+    .map((p) => ({
+      title: p.title,
+      role: "Production Photographer",
+      venue: p.company,
+      year: p.year!,
+      href: `/production-photography/${p.slug}`,
+      category: "photography",
+    }));
+
+  return [...design, ...programming, ...photography];
 }
 
 function groupByYear(entries: Entry[]): [number, Entry[]][] {
@@ -62,6 +74,7 @@ function groupByYear(entries: Entry[]): [number, Entry[]][] {
 
 const categoryDot: Record<Entry["category"], string> = {
   design: "text-[#FFCC00]",
+  photography: "text-neutral-300",
   programming: "text-neutral-500",
 };
 
@@ -76,6 +89,9 @@ export default function TimelinePage() {
         <div className="flex items-center gap-6 mt-6">
           <span className="flex items-center gap-2 text-[0.68rem] font-ui text-neutral-500">
             <span className="text-[#FFCC00]">●</span> Design
+          </span>
+          <span className="flex items-center gap-2 text-[0.68rem] font-ui text-neutral-500">
+            <span className="text-neutral-300">●</span> Photography
           </span>
           <span className="flex items-center gap-2 text-[0.68rem] font-ui text-neutral-500">
             <span className="text-neutral-500">●</span> Programming
