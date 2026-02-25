@@ -97,7 +97,7 @@ export default function GalleryGrid({ images, title }: { images: string[]; title
           )}
 
           {/* Counter */}
-          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs font-mono text-neutral-500">
+          <p className="font-ui absolute bottom-4 left-1/2 -translate-x-1/2 text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500">
             {active + 1} / {images.length}
           </p>
         </div>
