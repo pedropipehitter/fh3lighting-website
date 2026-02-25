@@ -27,7 +27,7 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
     <div className="max-w-5xl mx-auto px-6 py-20">
       <Link
         href="/lighting-design"
-        className="text-xs font-mono text-neutral-500 hover:text-violet-400 transition-colors tracking-widest uppercase mb-10 inline-block"
+        className="text-xs font-mono text-neutral-500 hover:text-[#FFCC00] transition-colors tracking-widest uppercase mb-10 inline-block"
       >
         ← Lighting Design
       </Link>
