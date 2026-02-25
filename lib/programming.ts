@@ -17,7 +17,7 @@ export const programmingCredits: ProgrammingCredit[] = [
   },
   {
     production: "44 the Musical",
-    designer: "Nathan Scheuer / Natali Arco",
+    designer: "Nathan Scheuer & Natali Arco",
     venue: "Daryl Roth Theatre, NYC",
     console: "ETC Eos GIO",
     year: 2025,
