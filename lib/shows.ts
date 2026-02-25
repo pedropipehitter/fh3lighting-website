@@ -27,6 +27,7 @@ export const shows: Show[] = [
     location: "Omaha, NE",
     year: 2024,
     image: "/images/SNOTL129.jpg",
+    gallery: lightingDesignGalleries["silent-night-of-the-lambs"],
     collaborators: [
       { role: "Director", name: "Susan Clement" },
       { role: "Choreography", name: "Carrie Nath" },
@@ -44,6 +45,7 @@ export const shows: Show[] = [
     location: "Los Angeles, CA",
     year: 2024,
     image: "/images/080124-UCLA-MTSI-SOMETHING-ROTTEN-FH3-10.JPG",
+    gallery: lightingDesignGalleries["something-rotten"],
     collaborators: [
       { role: "Director", name: "Jeff Maynard" },
       { role: "Scenic Design", name: "Michael Sellers" },
@@ -60,6 +62,7 @@ export const shows: Show[] = [
     location: "Houston, TX",
     year: 2024,
     image: "/images/Alley-Theatre-The-Nerd-Lynn-Lane-1.jpg",
+    gallery: lightingDesignGalleries["the-nerd"],
     collaborators: [
       { role: "Director", name: "Brandon Weinbrenner" },
       { role: "Scenic Design", name: "Tim Mackabee" },
@@ -77,6 +80,7 @@ export const shows: Show[] = [
     location: "Houston, TX",
     year: 2023,
     image: "/images/11182023-Alley-CAROL-FH3-15.JPG",
+    gallery: lightingDesignGalleries["a-christmas-carol"],
     collaborators: [
       { role: "Director", name: "Rob Melrose" },
       { role: "Scenic Design", name: "Michael Locher" },
@@ -95,6 +99,7 @@ export const shows: Show[] = [
     location: "Houston, TX",
     year: 2023,
     image: "/images/Alley_Theatre_Little_Comedies_Photographer_Lynn_Lane-346-scaled.jpg",
+    gallery: lightingDesignGalleries["little-comedies"],
     collaborators: [
       { role: "Director", name: "Richard Nelson" },
       { role: "Scenic Design", name: "Michael Locher" },
@@ -112,6 +117,7 @@ export const shows: Show[] = [
     location: "Houston, TX",
     year: 2023,
     image: "/images/AM_ALLEY_6.jpg",
+    gallery: lightingDesignGalleries["american-mariachi"],
     collaborators: [
       { role: "Director", name: "KJ Sanchez" },
       { role: "Scenic Design", name: "Tanya Orellana" },
@@ -130,6 +136,7 @@ export const shows: Show[] = [
     location: "Lincoln, NE",
     year: 2023,
     image: "/images/05022023-LNK_TPTGW-FH3-66.JPG",
+    gallery: lightingDesignGalleries["the-play-that-goes-wrong"],
     collaborators: [
       { role: "Director", name: "Ann Marie Pollard" },
       { role: "Scenic Design", name: "JD Madsen" },
