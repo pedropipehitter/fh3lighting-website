@@ -24,3 +24,5 @@
 - [x] **Individual photography gallery pages** — currently show a 6-placeholder grid. Add real photos per project once Francisco supplies them (or scrape sub-pages from Squarespace gallery pages)
 - [x] **Hero image** — homepage hero is a gradient placeholder. Could use one of the show photos as a full-bleed background
 - [x] **Mobile nav** — current nav wraps on small screens; could collapse into a hamburger menu
+- [x] **Lighting design show galleries from legacy site** — imported and organized per-show local image folders from Squarespace
+- [x] **Lighting design detail page galleries + lightbox** — each matched show page now uses standard site lightboxing with hero-first gallery behavior
