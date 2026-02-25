@@ -34,6 +34,7 @@ export default function Home() {
           alt="Theatrical production lighting"
           fill
           priority
+          quality={82}
           className="object-cover object-center"
           sizes="100vw"
         />

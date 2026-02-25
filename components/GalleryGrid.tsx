@@ -60,8 +60,7 @@ export default function GalleryGrid({ images, title }: { images: string[]; title
               alt={`${title} — photo ${active + 1}`}
               fill
               className="object-contain"
-              sizes="100vw"
-              priority
+              sizes="(min-width: 1280px) 1200px, 100vw"
             />
           </div>
 

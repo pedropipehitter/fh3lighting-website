@@ -22,6 +22,7 @@ export default function AboutPage() {
               alt="Francisco Hermosillo III"
               fill
               className="object-cover object-top"
+              sizes="(min-width: 1024px) 320px, 100vw"
             />
           </div>
         </div>
@@ -46,7 +47,7 @@ export default function AboutPage() {
             <em className="text-neutral-300">Thornton Wilder Journal</em>.
           </p>
           <p>
-            Francisco holds a BA in Music Composition from California Lutheran University ('18),
+            Francisco holds a BA in Music Composition from California Lutheran University (&apos;18),
             with additional study under Dr. Michael Schelle at Butler University.
           </p>
         </div>

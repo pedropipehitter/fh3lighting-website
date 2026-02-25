@@ -40,6 +40,7 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
             fill
             className="object-contain"
             priority
+            sizes="(min-width: 1024px) 960px, 100vw"
           />
         </div>
       )}

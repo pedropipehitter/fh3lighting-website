@@ -24,6 +24,7 @@ export default function LightingDesignPage() {
                   alt={show.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
