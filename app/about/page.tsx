@@ -52,7 +52,8 @@ export default function AboutPage() {
         <div className="lg:col-span-2 space-y-6 text-neutral-300 leading-relaxed text-[0.9rem]">
           <p>
             Francisco Hermosillo III is a freelance lighting designer, programmer, and production
-            photographer based in New York City. He holds an MFA in Lighting Design from the University
+            photographer based in New York City. A Mexican-American artist raised in San Pedro, Los Angeles,
+            California, he holds an MFA in Lighting Design from the University
             of Nebraska&apos;s Johnny Carson School of Theatre and Film, where he studied as a Graduate
             Teaching Assistant and Hixson-Lied Fellow under the mentorship of Michelle Harvey.
           </p>
