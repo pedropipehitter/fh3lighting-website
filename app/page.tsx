@@ -53,7 +53,7 @@ const featuredWork = [
 ];
 
 export const metadata: Metadata = {
-  title: "Francisco Hermosillo III",
+  title: { absolute: "Francisco Hermosillo III" },
   description: siteConfig.description,
   alternates: {
     canonical: "/",
