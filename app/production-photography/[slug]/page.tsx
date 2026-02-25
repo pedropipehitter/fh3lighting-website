@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { photoProjects } from "@/lib/photography";
+import GalleryGrid from "@/components/GalleryGrid";
 
 export function generateStaticParams() {
   return photoProjects.map((p) => ({ slug: p.slug }));
@@ -37,19 +37,7 @@ export default async function PhotoProjectPage({ params }: { params: Promise<{ s
         <p className="text-neutral-500 mb-10">{project.company}</p>
 
         {project.gallery && project.gallery.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-neutral-800 mb-12">
-            {project.gallery.map((src, i) => (
-              <div key={i} className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
-                <Image
-                  src={src}
-                  alt={`${project.title} — photo ${i + 1}`}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="(min-width: 640px) 33vw, 50vw"
-                />
-              </div>
-            ))}
-          </div>
+          <GalleryGrid images={project.gallery} title={project.title} />
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-neutral-800 mb-12">
             {Array.from({ length: 6 }).map((_, i) => (
