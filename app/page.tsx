@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HomeHeroActions from "@/components/HomeHeroActions";
+import PressStrip from "@/components/PressStrip";
 import { absoluteUrl, siteConfig } from "@/lib/seo";
 
 const sections = [
@@ -139,6 +140,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <PressStrip />
 
       {/* Section cards */}
       <section className="max-w-7xl mx-auto px-6 py-24">
