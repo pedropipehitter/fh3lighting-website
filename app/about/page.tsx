@@ -42,6 +42,7 @@ export default function AboutPage() {
               alt="Francisco Hermosillo III"
               fill
               className="object-cover object-top"
+              sizes="(min-width: 1024px) 320px, 100vw"
             />
           </div>
         </div>
