@@ -9,6 +9,7 @@ const links = [
   { href: "/lighting-design", label: "Lighting Design" },
   { href: "/lighting-programming", label: "Lighting Programming" },
   { href: "/production-photography", label: "Production Photography" },
+  { href: "/timeline", label: "Timeline" },
   { href: "/contact", label: "Contact" },
 ];
 
