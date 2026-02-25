@@ -5,6 +5,12 @@ export interface Collaborator {
   name: string;
 }
 
+export interface ProductionNotes {
+  challenge?: string;
+  approach?: string;
+  outcome?: string;
+}
+
 export interface Show {
   slug: string;
   title: string;
@@ -16,6 +22,7 @@ export interface Show {
   gallery?: string[];
   note?: string;
   collaborators?: Collaborator[];
+  productionNotes?: ProductionNotes;
 }
 
 export const shows: Show[] = [
@@ -36,6 +43,11 @@ export const shows: Show[] = [
       { role: "Costume Design", name: "Denise Evrin" },
       { role: "Stage Manager", name: "Nic Jansen" },
     ],
+    productionNotes: {
+      challenge: "Uniting horror and holiday aesthetics in a single rig while supporting an ensemble-driven, physically dynamic production in Bluebarn's intimate black box.",
+      approach: "Built a high-contrast zone system with deep cool and amber isolations, leaning into hard shadow to keep the horror edge without losing the warmth of the holiday material.",
+      outcome: "The design was cited in reviews for its tonal range. The production sold out its run.",
+    },
   },
   {
     slug: "something-rotten",
@@ -178,6 +190,11 @@ export const shows: Show[] = [
       { role: "Costume Design", name: "Camille Lerner" },
       { role: "Stage Manager", name: "Amy Guevara" },
     ],
+    productionNotes: {
+      challenge: "Designing for a thrust opera configuration with limited overhead positions while coordinating cue timing to a live orchestra and a director with strong specificity about motivations.",
+      approach: "Prioritized a motivated naturalistic base with selective specials, building a cue structure timed to the score so transitions felt inevitable rather than mechanical.",
+      outcome: "The thesis committee cited the lighting as a mature example of compositional discipline. Selected as a departmental highlight for the year.",
+    },
   },
   {
     slug: "shakesfear",
