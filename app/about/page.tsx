@@ -29,8 +29,8 @@ export default function AboutPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-20">
       <header className="mb-16">
-        <p className="text-xs font-mono tracking-[0.3em] text-[#FFCC00] uppercase mb-3">About</p>
-        <h1 className="text-4xl font-light text-white">Francisco Hermosillo III</h1>
+        <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-3">About</p>
+        <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-white">Francisco Hermosillo III</h1>
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
@@ -48,7 +48,7 @@ export default function AboutPage() {
         </div>
 
         {/* Bio */}
-        <div className="lg:col-span-2 space-y-6 text-neutral-400 leading-relaxed">
+        <div className="lg:col-span-2 space-y-6 text-neutral-300 leading-relaxed text-[0.9rem]">
           <p>
             Francisco Hermosillo III is a freelance lighting designer, programmer, and production
             photographer based in New York City. He holds an MFA in Lighting Design from the University
@@ -75,7 +75,7 @@ export default function AboutPage() {
 
       {/* Experience */}
       <section className="mb-16 border-t border-neutral-800 pt-12">
-        <h2 className="text-xs font-mono text-neutral-600 uppercase tracking-widest mb-8">Experience</h2>
+        <h2 className="font-ui-label text-[0.62rem] text-neutral-500 mb-8">Experience</h2>
         <div className="space-y-6">
           {[
             { role: "Project Engineer", org: "5 Words Media", years: "2024–2025" },
@@ -85,9 +85,9 @@ export default function AboutPage() {
             { role: "Graduate Teaching Assistant", org: "University of Nebraska–Lincoln", years: "2020–2023" },
           ].map(({ role, org, years }) => (
             <div key={org} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-              <span className="text-white text-sm">{role}</span>
-              <span className="text-neutral-500 text-sm">{org}</span>
-              <span className="text-neutral-700 text-xs font-mono sm:ml-auto">{years}</span>
+              <span className="font-heading text-white text-[0.9rem]">{role}</span>
+              <span className="text-neutral-500 text-[0.8rem]">{org}</span>
+              <span className="font-ui text-neutral-700 text-[0.62rem] uppercase tracking-[0.1em] sm:ml-auto">{years}</span>
             </div>
           ))}
         </div>
@@ -95,16 +95,16 @@ export default function AboutPage() {
 
       {/* Select Credits */}
       <section className="mb-16 border-t border-neutral-800 pt-12">
-        <h2 className="text-xs font-mono text-neutral-600 uppercase tracking-widest mb-8">Select Design Credits</h2>
-        <p className="text-neutral-500 text-sm leading-relaxed">
+        <h2 className="font-ui-label text-[0.62rem] text-neutral-500 mb-8">Select Design Credits</h2>
+        <p className="text-neutral-500 text-[0.8rem] leading-relaxed">
           Lied Center · Nebraska Repertory Theatre · Glenn Korff School of Music · St. Louis Black Rep ·
           Nebraska Wesleyan University · Bluebarn Theatre · Opera Omaha · UCLA TFT
         </p>
       </section>
 
       <section className="mb-16 border-t border-neutral-800 pt-12">
-        <h2 className="text-xs font-mono text-neutral-600 uppercase tracking-widest mb-8">Select Programming Credits</h2>
-        <p className="text-neutral-500 text-sm leading-relaxed">
+        <h2 className="font-ui-label text-[0.62rem] text-neutral-500 mb-8">Select Programming Credits</h2>
+        <p className="text-neutral-500 text-[0.8rem] leading-relaxed">
           Daryl Roth Theatre · Minetta Lane Theatre · Northern Stage · SeaWorld Orlando · The Mirage Las Vegas · SUNY Purchase
         </p>
       </section>
@@ -113,7 +113,7 @@ export default function AboutPage() {
       <div className="border-t border-neutral-800 pt-12 flex gap-4 flex-wrap">
         <Link
           href="/contact"
-          className="px-6 py-3 bg-[#FFCC00] hover:bg-[#ffd633] text-black text-sm tracking-wide transition-colors"
+          className="font-ui px-6 py-3 bg-[#FFCC00] hover:bg-[#ffd633] text-black text-[0.74rem] uppercase tracking-[0.12em] transition-colors"
         >
           Get in Touch
         </Link>
@@ -121,7 +121,7 @@ export default function AboutPage() {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-3 border border-neutral-700 hover:border-neutral-500 text-neutral-300 hover:text-white text-sm tracking-wide transition-colors"
+          className="font-ui px-6 py-3 border border-neutral-700 hover:border-neutral-500 text-neutral-300 hover:text-white text-[0.74rem] uppercase tracking-[0.12em] transition-colors"
         >
           Download Resume
         </a>
