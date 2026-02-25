@@ -31,7 +31,7 @@ export default function LightingProgrammingPage() {
             {programmingCredits.map((credit, i) => (
               <tr key={i} className="border-b border-neutral-900 hover:bg-neutral-900/50 transition-colors">
                 <td className="py-4 pr-8 text-white font-medium">
-                  {credit.production}{credit.sub && <sup className="text-[#FFCC00] ml-0.5">*</sup>}
+                  {credit.production}{credit.sub && <sup className="text-[#FFCC00] text-sm ml-0.5">*</sup>}
                 </td>
                 <td className="py-4 pr-8 text-neutral-400">{credit.designer}</td>
                 <td className="py-4 pr-8 text-neutral-400">{credit.venue}</td>
@@ -41,8 +41,8 @@ export default function LightingProgrammingPage() {
             ))}
           </tbody>
         </table>
-        <p className="text-xs text-neutral-600 font-mono mt-3">
-          <sup className="text-[#FFCC00]">*</sup> Substitute programmer
+        <p className="text-sm text-neutral-500 font-mono mt-3">
+          <sup className="text-[#FFCC00] text-sm">*</sup> Substitute programmer
         </p>
       </div>
 
