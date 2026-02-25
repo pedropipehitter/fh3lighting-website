@@ -57,7 +57,7 @@ export default function ContactPage() {
           href="https://instagram.com/fh3.lx"
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-neutral-400 hover:text-violet-400 transition-colors text-[0.8rem]"
+          className="block text-neutral-400 hover:text-[#FFCC00] transition-colors text-[0.8rem]"
         >
           @fh3.lx on Instagram
         </a>
