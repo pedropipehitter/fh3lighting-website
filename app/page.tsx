@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HomeHeroActions from "@/components/HomeHeroActions";
+import InquiryBlock from "@/components/InquiryBlock";
 import { absoluteUrl, siteConfig } from "@/lib/seo";
 
 const sections = [
@@ -160,6 +161,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <InquiryBlock />
     </div>
   );
 }
