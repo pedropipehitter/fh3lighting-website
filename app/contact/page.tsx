@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
 import { absoluteUrl } from "@/lib/seo";
 
@@ -36,9 +35,7 @@ export default function ContactPage() {
         </p>
       </header>
 
-      <Suspense>
-        <ContactForm />
-      </Suspense>
+      <ContactForm />
 
       <div className="mt-16 pt-10 border-t border-neutral-800 space-y-3">
         <p className="font-ui-label text-[0.62rem] text-neutral-600 mb-4">Direct</p>

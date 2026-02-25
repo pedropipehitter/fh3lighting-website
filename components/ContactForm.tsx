@@ -1,11 +1,10 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 import { track } from "@vercel/analytics";
 
 export default function ContactForm() {
-  const params = useSearchParams();
-  const service = params.get("service") ?? "";
+  const [service, setService] = useState("");
 
   return (
     <form
@@ -42,16 +41,22 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="subject" className="font-ui-label block text-[0.62rem] text-neutral-500 mb-2">
-          Subject
+        <label htmlFor="service" className="font-ui-label block text-[0.62rem] text-neutral-500 mb-2">
+          Service
         </label>
-        <input
-          id="subject"
-          name="subject"
-          type="text"
-          defaultValue={service}
+        <select
+          id="service"
+          name="service"
+          value={service}
+          onChange={(e) => setService(e.target.value)}
           className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-[0.82rem] focus:outline-none focus:border-[#FFCC00] transition-colors"
-        />
+        >
+          <option value="" disabled>Select a service...</option>
+          <option value="Lighting Design">Lighting Design</option>
+          <option value="Lighting Programming">Lighting Programming</option>
+          <option value="Production Photography">Production Photography</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
 
       <div>
