@@ -13,7 +13,7 @@ const sections = [
   {
     href: "/lighting-programming",
     title: "Lighting Programming",
-    description: "Programming credits on Broadway-adjacent and major-venue productions.",
+    description: "Programming credits across Off-Broadway, large-scale live events, and regional/summerstock productions.",
   },
   {
     href: "/production-photography",
@@ -47,7 +47,7 @@ const featuredWork = [
     image: "/images/080124-UCLA-MTSI-SOMETHING-ROTTEN-FH3-10.JPG",
     category: "Lighting Programming",
     title: "Programming Credits",
-    detail: "Broadway-adjacent and major-venue productions",
+    detail: "Off-Broadway, large-scale live events, and regional/summerstock productions",
   },
 ];
 
