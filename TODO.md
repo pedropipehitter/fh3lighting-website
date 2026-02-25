@@ -13,7 +13,7 @@
   - In Vercel project → Settings → Domains → add `franciscohermosilloiii.com`
   - Then cancel Squarespace hosting plan (keep domain-only if still registered there)
 
-- [ ] **Verify 3 possibly mismatched show images** — these were assigned by page position, not filename, so Francisco should confirm:
+- [x] **Verify 3 possibly mismatched show images** — these were assigned by page position, not filename, so Francisco should confirm:
   - Eugene Onegin → `IMG_2856.JPG`
   - TMFD Department Installation → `IMG_0216.JPG`
   - Student Dance Projects → `IMG_8890.JPG`

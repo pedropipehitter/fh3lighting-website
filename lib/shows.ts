@@ -239,7 +239,7 @@ export const shows: Show[] = [
     venue: "Lied Center / Glenn Korff School of Music",
     location: "Lincoln, NE",
     year: 2021,
-    image: "/images/20210308_213300325_iOS.jpg",
+    image: "/images/IMG_8890.JPG",
   },
   {
     slug: "tmfd-department-installation",
@@ -248,7 +248,7 @@ export const shows: Show[] = [
     venue: "UNL TMFD Department Gallery",
     location: "Lincoln, NE",
     year: 2021,
-    image: "/images/IMG_0216.JPG",
+    image: "/images/20210308_213300325_iOS.jpg",
   },
   {
     slug: "student-dance-projects",
@@ -257,7 +257,7 @@ export const shows: Show[] = [
     venue: "Glenn Korff School of Music",
     location: "Lincoln, NE",
     year: 2021,
-    image: "/images/IMG_8890.JPG",
+    image: "/images/IMG_0216.JPG",
     collaborators: [
       { role: "Choreography", name: "Hannah Friedt & Valerie Gust" },
     ],
