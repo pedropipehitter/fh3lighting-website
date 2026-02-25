@@ -5,8 +5,9 @@ export default function InquiryBlock() {
     <section className="max-w-7xl mx-auto px-6 py-24 border-t border-neutral-800">
       <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-4">Availability</p>
       <p className="text-neutral-300 text-[0.9rem] leading-relaxed max-w-xl mb-8">
-        I'm currently available for lighting design, programming, and production photography.
-        If you have a project coming up, I'd love to hear about it.
+        I'm currently booking programming work starting July 2026 and beyond, and remain
+        available for lighting design and production photography. If you have a project coming
+        up, I'd love to hear about it.
       </p>
       <Link
         href="/contact"
