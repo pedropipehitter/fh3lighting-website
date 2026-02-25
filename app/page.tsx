@@ -27,6 +27,30 @@ const sections = [
   },
 ];
 
+const featuredWork = [
+  {
+    href: "/lighting-design/silent-night-of-the-lambs",
+    image: "/images/SNOTL129.jpg",
+    category: "Lighting Design",
+    title: "Silent Night of the Lambs",
+    detail: "Bluebarn Theatre · 2024",
+  },
+  {
+    href: "/production-photography/nutcracker",
+    image: "/images/121324-LNK-NUTCRACKER-FH3-12.JPG",
+    category: "Production Photography",
+    title: "Nutcracker",
+    detail: "Midwest Ballet Company",
+  },
+  {
+    href: "/lighting-programming",
+    image: "/images/080124-UCLA-MTSI-SOMETHING-ROTTEN-FH3-10.JPG",
+    category: "Lighting Programming",
+    title: "Programming Credits",
+    detail: "Broadway-adjacent and major-venue productions",
+  },
+];
+
 export const metadata: Metadata = {
   title: "Home",
   description: siteConfig.description,
@@ -74,6 +98,45 @@ export default function Home() {
             Designing for theatre, opera, dance, and live entertainment.
           </p>
           <HomeHeroActions />
+        </div>
+      </section>
+
+      {/* Featured work */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="flex items-end justify-between mb-8 gap-4 flex-wrap">
+          <div>
+            <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-3">Featured Work</p>
+            <h2 className="font-heading text-2xl sm:text-3xl text-white">Current Highlights</h2>
+          </div>
+          <Link
+            href="/lighting-design"
+            className="font-ui text-[0.64rem] uppercase tracking-[0.12em] text-neutral-400 hover:text-white transition-colors"
+          >
+            View Full Portfolio →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {featuredWork.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group relative overflow-hidden border border-neutral-800 bg-neutral-900 min-h-[22rem]"
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(min-width: 1024px) 33vw, 100vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/15" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-2">{item.category}</p>
+                <h3 className="font-heading text-xl text-white mb-1">{item.title}</h3>
+                <p className="text-[0.78rem] text-neutral-300">{item.detail}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
