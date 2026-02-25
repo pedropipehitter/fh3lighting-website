@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { photoProjects } from "@/lib/photography";
@@ -35,14 +36,29 @@ export default async function PhotoProjectPage({ params }: { params: Promise<{ s
         <h1 className="text-4xl font-light text-white mb-2">{project.title}</h1>
         <p className="text-neutral-500 mb-10">{project.company}</p>
 
-        {/* Placeholder gallery grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-neutral-800 mb-12">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="aspect-[4/3] bg-neutral-900 flex items-center justify-center">
-              <span className="text-neutral-700 font-mono text-xs">{i + 1}</span>
-            </div>
-          ))}
-        </div>
+        {project.gallery && project.gallery.length > 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-neutral-800 mb-12">
+            {project.gallery.map((src, i) => (
+              <div key={i} className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
+                <Image
+                  src={src}
+                  alt={`${project.title} — photo ${i + 1}`}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(min-width: 640px) 33vw, 50vw"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-neutral-800 mb-12">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="aspect-[4/3] bg-neutral-900 flex items-center justify-center">
+                <span className="text-neutral-700 font-mono text-xs">{i + 1}</span>
+              </div>
+            ))}
+          </div>
+        )}
 
         {project.credits && (
           <div className="border-t border-neutral-800 pt-8">
