@@ -74,7 +74,7 @@ function groupByYear(entries: Entry[]): [number, Entry[]][] {
 
 const categoryDot: Record<Entry["category"], string> = {
   design: "text-[#FFCC00]",
-  photography: "text-neutral-300",
+  photography: "text-[#1E90FF]",
   programming: "text-neutral-500",
 };
 
@@ -91,7 +91,7 @@ export default function TimelinePage() {
             <span className="text-[#FFCC00]">●</span> Design
           </span>
           <span className="flex items-center gap-2 text-[0.68rem] font-ui text-neutral-500">
-            <span className="text-neutral-300">●</span> Photography
+            <span className="text-[#1E90FF]">●</span> Photography
           </span>
           <span className="flex items-center gap-2 text-[0.68rem] font-ui text-neutral-500">
             <span className="text-neutral-500">●</span> Programming
