@@ -120,27 +120,8 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
 
         {show.productionNotes && (
           <div className="border-t border-neutral-900 pt-8 mt-8">
-            <p className="font-ui-label text-[0.62rem] text-neutral-700 mb-6">Production Notes</p>
-            <dl className="space-y-5">
-              {show.productionNotes.challenge && (
-                <div className="grid grid-cols-[7rem_1fr] gap-4">
-                  <dt className="font-ui text-[0.65rem] uppercase tracking-[0.1em] text-neutral-600 pt-0.5">Challenge</dt>
-                  <dd className="text-neutral-400 text-[0.82rem] leading-relaxed">{show.productionNotes.challenge}</dd>
-                </div>
-              )}
-              {show.productionNotes.approach && (
-                <div className="grid grid-cols-[7rem_1fr] gap-4">
-                  <dt className="font-ui text-[0.65rem] uppercase tracking-[0.1em] text-neutral-600 pt-0.5">Approach</dt>
-                  <dd className="text-neutral-400 text-[0.82rem] leading-relaxed">{show.productionNotes.approach}</dd>
-                </div>
-              )}
-              {show.productionNotes.outcome && (
-                <div className="grid grid-cols-[7rem_1fr] gap-4">
-                  <dt className="font-ui text-[0.65rem] uppercase tracking-[0.1em] text-neutral-600 pt-0.5">Outcome</dt>
-                  <dd className="text-neutral-400 text-[0.82rem] leading-relaxed">{show.productionNotes.outcome}</dd>
-                </div>
-              )}
-            </dl>
+            <p className="font-ui-label text-[0.62rem] text-neutral-700 mb-4">Production Notes</p>
+            <p className="text-neutral-400 text-[0.82rem] leading-relaxed">{show.productionNotes}</p>
           </div>
         )}
 
