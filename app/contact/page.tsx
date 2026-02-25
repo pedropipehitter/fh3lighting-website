@@ -31,7 +31,7 @@ export default function ContactPage() {
         <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-3">Contact</p>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-white mb-4">Get in Touch</h1>
         <p className="text-neutral-400 text-[0.9rem]">
-          Available for lighting design, programming, and production photography projects.
+          Currently booking programming work starting July 2026 and beyond, and available for lighting design and production photography.
         </p>
       </header>
 
