@@ -40,3 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - Content workflow: `docs/content-update-workflow.md`
 - Content entry templates: `docs/content-templates.md`
 - Performance baseline: `docs/performance/lighthouse-baseline.md`
+- CMS evaluation: `docs/cms-evaluation.md`
