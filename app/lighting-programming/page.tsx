@@ -41,13 +41,22 @@ export default function LightingProgrammingPage() {
         </table>
       </div>
 
-      <div className="border border-neutral-800 p-8 bg-neutral-900/30">
-        <p className="text-xs font-mono text-[#FFCC00] uppercase tracking-widest mb-4">Confidential Work</p>
-        <p className="text-neutral-400 leading-relaxed">
-          I work regularly on high-profile private and corporate events — major sporting events, exclusive galas,
-          and private performances. These projects require strict confidentiality; I&apos;m well-practiced at operating
-          with discretion under high-pressure, high-visibility conditions.
-        </p>
+      <div className="grid sm:grid-cols-2 gap-4 mb-0">
+        <div className="border border-neutral-800 p-8 bg-neutral-900/30">
+          <p className="text-xs font-mono text-[#FFCC00] uppercase tracking-widest mb-4">Confidential Work</p>
+          <p className="text-neutral-400 leading-relaxed">
+            I work regularly on high-profile private and corporate events — major sporting events, exclusive galas,
+            and private performances. These projects require strict confidentiality; I&apos;m well-practiced at operating
+            with discretion under high-pressure, high-visibility conditions.
+          </p>
+        </div>
+        <div className="border border-neutral-800 p-8 bg-neutral-900/30">
+          <p className="text-xs font-mono text-[#FFCC00] uppercase tracking-widest mb-4">Alley Theatre — 2023–2024</p>
+          <p className="text-neutral-400 leading-relaxed">
+            Served as a programming mentor for the Alley Theatre, training staff electricians in ETC Eos programming
+            as part of their rotating show duties.
+          </p>
+        </div>
       </div>
     </div>
   );
