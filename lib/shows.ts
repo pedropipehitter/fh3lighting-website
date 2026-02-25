@@ -1,3 +1,5 @@
+import { lightingDesignGalleries } from "@/lib/lightingDesignGalleries";
+
 export interface Collaborator {
   role: string;
   name: string;
@@ -11,6 +13,7 @@ export interface Show {
   location: string;
   year: number;
   image?: string;
+  gallery?: string[];
   note?: string;
   collaborators?: Collaborator[];
 }
@@ -143,6 +146,7 @@ export const shows: Show[] = [
     location: "Lincoln, NE",
     year: 2022,
     image: "/images/FH3-11302022-HOLIDAY-INN-18.jpg",
+    gallery: lightingDesignGalleries["holiday-inn"],
     collaborators: [
       { role: "Director", name: "Anne McAlexander" },
       { role: "Scenic Design", name: "Kelly Vogel" },
@@ -158,6 +162,7 @@ export const shows: Show[] = [
     location: "Lincoln, NE",
     year: 2022,
     image: "/images/FH3-11102022-FIGARO-41.jpg",
+    gallery: lightingDesignGalleries["the-marriage-of-figaro"],
     note: "MFA Thesis Production",
     collaborators: [
       { role: "Director", name: "Dr. William Shomos" },
@@ -175,6 +180,7 @@ export const shows: Show[] = [
     location: "Lincoln, NE",
     year: 2022,
     image: "/images/FH3-10122022-SHAKESFEAR-MH-16.jpg",
+    gallery: lightingDesignGalleries["shakesfear"],
     collaborators: [
       { role: "Written & Directed by", name: "Andy Park" },
       { role: "Scenic Design", name: "JD Madsen" },
@@ -191,6 +197,7 @@ export const shows: Show[] = [
     location: "Omaha, NE",
     year: 2022,
     image: "/images/IMG_2856.JPG",
+    gallery: lightingDesignGalleries["eugene-onegin"],
     collaborators: [
       { role: "Director", name: "Rosetta Cucchi" },
       { role: "Conductor", name: "Maestro Steven White" },
@@ -207,6 +214,7 @@ export const shows: Show[] = [
     location: "Lincoln, NE",
     year: 2022,
     image: "/images/FH3-OT-01.JPG",
+    gallery: lightingDesignGalleries["our-town"],
     collaborators: [
       { role: "Director", name: "Arthur Feinsod" },
       { role: "Scenic Design", name: "Taylor Walters-Riggsbee" },
@@ -225,6 +233,7 @@ export const shows: Show[] = [
     location: "Lincoln, NE",
     year: 2022,
     image: "/images/03252022-Traveling-Shoes-NRT-17.jpg",
+    gallery: lightingDesignGalleries["traveling-shoes"],
     collaborators: [
       { role: "Director", name: "Ron Himes" },
       { role: "Scenic Design", name: "Brad LaMotte" },
@@ -240,6 +249,7 @@ export const shows: Show[] = [
     location: "Lincoln, NE",
     year: 2021,
     image: "/images/IMG_8890.JPG",
+    gallery: lightingDesignGalleries["evening-of-dance-2021"],
   },
   {
     slug: "tmfd-department-installation",
@@ -249,6 +259,7 @@ export const shows: Show[] = [
     location: "Lincoln, NE",
     year: 2021,
     image: "/images/20210308_213300325_iOS.jpg",
+    gallery: lightingDesignGalleries["tmfd-department-installation"],
   },
   {
     slug: "student-dance-projects",
@@ -258,6 +269,7 @@ export const shows: Show[] = [
     location: "Lincoln, NE",
     year: 2021,
     image: "/images/IMG_0216.JPG",
+    gallery: lightingDesignGalleries["student-dance-projects"],
     collaborators: [
       { role: "Choreography", name: "Hannah Friedt & Valerie Gust" },
     ],

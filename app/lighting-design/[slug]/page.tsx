@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { absoluteUrl } from "@/lib/seo";
 import { shows } from "@/lib/shows";
+import GalleryGrid from "@/components/GalleryGrid";
 
 export function generateStaticParams() {
   return shows.map((show) => ({ slug: show.slug }));
@@ -14,7 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const show = shows.find((s) => s.slug === slug);
   if (!show) return {};
   const description = `${show.role} for ${show.title} at ${show.venue} in ${show.location} (${show.year}).`;
-  const imageUrl = show.image ? absoluteUrl(show.image) : absoluteUrl("/images/SNOTL129.jpg");
+  const shareImage = show.gallery?.[0] ?? show.image;
+  const imageUrl = shareImage ? absoluteUrl(shareImage) : absoluteUrl("/images/SNOTL129.jpg");
 
   return {
     title: show.title,
@@ -46,6 +48,7 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
   const index = shows.indexOf(show);
   const prev = shows[index - 1];
   const next = shows[index + 1];
+  const heroImage = show.gallery?.[0] ?? show.image;
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-20">
@@ -56,10 +59,10 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
         ← Lighting Design
       </Link>
 
-      {show.image && (
+      {heroImage && (
         <div className="relative aspect-[16/9] mb-12 bg-neutral-900">
           <Image
-            src={show.image}
+            src={heroImage}
             alt={show.title}
             fill
             className="object-contain"
@@ -102,6 +105,13 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+
+        {show.gallery && show.gallery.length > 1 && (
+          <div className="border-t border-neutral-900 pt-10 mt-10">
+            <p className="font-ui-label text-[0.62rem] text-neutral-700 mb-4">Gallery</p>
+            <GalleryGrid images={show.gallery.slice(1)} title={show.title} />
           </div>
         )}
       </div>
