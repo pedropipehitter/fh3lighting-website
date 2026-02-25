@@ -54,13 +54,13 @@ export default function LightingProgrammingPage() {
                 </td>
                 <td className="py-4 pr-8 text-neutral-300 text-[0.82rem]">{credit.designer}</td>
                 <td className="py-4 pr-8 text-neutral-300 text-[0.82rem]">{credit.venue}</td>
-                <td className="font-ui py-4 pr-8 text-neutral-400 text-[0.7rem] uppercase tracking-[0.1em]">{credit.console}</td>
+                <td className="font-ui py-4 pr-8 text-neutral-400 text-xs uppercase tracking-[0.1em]">{credit.console}</td>
                 <td className="py-4 text-neutral-400 text-[0.8rem]">{credit.year}</td>
               </tr>
             ))}
           </tbody>
         </table>
-        <p className="font-ui text-[0.7rem] uppercase tracking-[0.1em] text-neutral-400 mt-3">
+        <p className="font-ui text-xs uppercase tracking-[0.1em] text-neutral-400 mt-3">
           <sup className="text-[#FFCC00] text-sm">*</sup> Substitute programmer
         </p>
       </div>

@@ -60,12 +60,22 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
       </Link>
 
       {heroImage && (
-        <div className="relative aspect-[16/9] mb-12 bg-neutral-900">
+        <div className="relative aspect-[16/9] mb-12 overflow-hidden">
+          {/* blurred fill */}
+          <Image
+            src={heroImage}
+            alt=""
+            aria-hidden
+            fill
+            className="object-cover blur-2xl scale-110 opacity-40"
+            sizes="(min-width: 1024px) 960px, 100vw"
+          />
+          {/* sharp image on top */}
           <Image
             src={heroImage}
             alt={show.title}
             fill
-            className="object-contain"
+            className="object-contain relative z-10"
             priority
             sizes="(min-width: 1024px) 960px, 100vw"
           />
@@ -75,7 +85,7 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
       <div className="border-t border-neutral-800 pt-10">
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-white mb-2">{show.title}</h1>
         {show.note && (
-          <p className="font-ui text-[0.68rem] uppercase tracking-[0.1em] text-violet-400 mb-8">{show.note}</p>
+          <p className="font-ui text-[0.68rem] uppercase tracking-[0.1em] text-[#FFCC00] mb-8">{show.note}</p>
         )}
         {!show.note && <div className="mb-8" />}
         <dl className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
@@ -86,7 +96,7 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
           <div>
             <dt className="font-ui-label text-[0.62rem] text-neutral-600 mb-1">Venue</dt>
             <dd className="text-neutral-300 text-[0.86rem]">{show.venue}</dd>
-            <dd className="text-neutral-600 text-[0.72rem] mt-0.5">{show.location}</dd>
+            <dd className="text-neutral-600 text-xs mt-0.5">{show.location}</dd>
           </div>
           <div>
             <dt className="font-ui-label text-[0.62rem] text-neutral-600 mb-1">Year</dt>
@@ -99,9 +109,9 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
             <p className="font-ui-label text-[0.62rem] text-neutral-700 mb-4">Creative Team</p>
             <ul className="space-y-1">
               {show.collaborators.map((c) => (
-                <li key={c.role} className="flex gap-3 text-[0.72rem]">
+                <li key={c.role} className="flex gap-3 text-xs">
                   <span className="font-ui text-neutral-700 w-40 shrink-0 uppercase tracking-[0.08em]">{c.role}</span>
-                  <span className="text-neutral-500 text-[0.8rem]">{c.name}</span>
+                  <span className="text-neutral-500 text-[0.84rem]">{c.name}</span>
                 </li>
               ))}
             </ul>
@@ -118,12 +128,12 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
 
       <div className="flex justify-between mt-16 pt-8 border-t border-neutral-800">
         {prev ? (
-          <Link href={`/lighting-design/${prev.slug}`} className="font-ui text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-white transition-colors">
+          <Link href={`/lighting-design/${prev.slug}`} className="font-ui text-[0.72rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-white transition-colors">
             ← {prev.title}
           </Link>
         ) : <span />}
         {next ? (
-          <Link href={`/lighting-design/${next.slug}`} className="font-ui text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-white transition-colors">
+          <Link href={`/lighting-design/${next.slug}`} className="font-ui text-[0.72rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-white transition-colors">
             {next.title} →
           </Link>
         ) : <span />}

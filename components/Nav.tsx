@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { track } from "@vercel/analytics";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -10,7 +9,6 @@ const links = [
   { href: "/lighting-design", label: "Lighting Design" },
   { href: "/lighting-programming", label: "Lighting Programming" },
   { href: "/production-photography", label: "Production Photography" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -44,7 +42,7 @@ export default function Nav() {
               key={href}
               href={href}
               aria-current={pathname === href ? "page" : undefined}
-              className={`font-ui text-[0.64rem] uppercase tracking-[0.12em] transition-colors ${
+              className={`font-ui text-[0.72rem] uppercase tracking-[0.12em] transition-colors ${
                 pathname === href
                   ? "text-[#FFCC00]"
                   : "text-neutral-400 hover:text-white"
@@ -53,39 +51,6 @@ export default function Nav() {
               {label}
             </Link>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => track("resume_download", { location: "nav_desktop" })}
-            className="font-ui text-[0.64rem] uppercase tracking-[0.12em] text-neutral-400 hover:text-white transition-colors"
-          >
-            Resume
-          </a>
-          <div className="flex items-center gap-3 ml-2 border-l border-neutral-800 pl-4">
-            <a
-              href="https://instagram.com/PhotobyFH3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-ui text-[0.6rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors"
-            >
-              IG
-            </a>
-            <a
-              href="https://instagram.com/fh3.lx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-ui text-[0.6rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors"
-            >
-              IG LX
-            </a>
-            <a
-              href="mailto:FH3@franciscohermosilloiii.com"
-              className="font-ui text-[0.6rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors"
-            >
-              Email
-            </a>
-          </div>
         </div>
 
         {/* Hamburger button */}
@@ -124,20 +89,6 @@ export default function Nav() {
               {label}
             </Link>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => track("resume_download", { location: "nav_mobile" })}
-            className="font-ui text-xs uppercase tracking-[0.12em] text-neutral-400 hover:text-white transition-colors"
-          >
-            Resume
-          </a>
-          <div className="flex gap-4 pt-2 border-t border-neutral-800">
-            <a href="https://instagram.com/PhotobyFH3" target="_blank" rel="noopener noreferrer" className="font-ui text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors">IG</a>
-            <a href="https://instagram.com/fh3.lx" target="_blank" rel="noopener noreferrer" className="font-ui text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors">IG LX</a>
-            <a href="mailto:FH3@franciscohermosilloiii.com" className="font-ui text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors">Email</a>
-          </div>
         </div>
       </div>
     </header>
