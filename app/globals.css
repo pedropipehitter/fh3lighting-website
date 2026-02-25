@@ -56,3 +56,8 @@ h6 {
 .font-mono {
   font-family: var(--font-ui) !important;
 }
+
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid #ffcc00;
+  outline-offset: 2px;
+}
