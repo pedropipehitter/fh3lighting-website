@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import HomeHeroActions from "@/components/HomeHeroActions";
 import { absoluteUrl, siteConfig } from "@/lib/seo";
 
 const sections = [
@@ -72,20 +73,7 @@ export default function Home() {
             Freelance lighting designer, programmer, and production photographer based in NYC.
             Designing for theatre, opera, dance, and live entertainment.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link
-              href="/lighting-design"
-              className="font-ui px-6 py-3 bg-[#FFCC00] hover:bg-[#ffd633] text-black text-[0.74rem] uppercase tracking-[0.12em] transition-colors"
-            >
-              View Work
-            </Link>
-            <Link
-              href="/contact"
-              className="font-ui px-6 py-3 border border-neutral-700 hover:border-neutral-500 text-neutral-300 hover:text-white text-[0.74rem] uppercase tracking-[0.12em] transition-colors"
-            >
-              Get in Touch
-            </Link>
-          </div>
+          <HomeHeroActions />
         </div>
       </section>
 

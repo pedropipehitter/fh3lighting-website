@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -56,6 +57,7 @@ export default function Nav() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track("resume_download", { location: "nav_desktop" })}
             className="font-ui text-[0.64rem] uppercase tracking-[0.12em] text-neutral-400 hover:text-white transition-colors"
           >
             Resume
@@ -126,6 +128,7 @@ export default function Nav() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track("resume_download", { location: "nav_mobile" })}
             className="font-ui text-xs uppercase tracking-[0.12em] text-neutral-400 hover:text-white transition-colors"
           >
             Resume
