@@ -4,6 +4,7 @@ export interface PhotoProject {
   slug: string;
   title: string;
   company: string;
+  year?: number;
   image?: string;
   gallery?: string[];
   credits?: {
@@ -21,6 +22,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "nutcracker",
     title: "Nutcracker",
     company: "Midwest Ballet Company",
+    year: 2024,
     image: "/images/121324-LNK-NUTCRACKER-FH3-12.JPG",
     gallery: [
       `${CDN}/1734739194037-N7L9IVJVON8410GML4MW/121324+-+LNK+-+NUTCRACKER+-++FH3+-12.JPG`,
@@ -38,6 +40,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "matilda",
     title: "Matilda",
     company: "Nebraska Wesleyan University Theatre",
+    year: 2024,
     image: "/images/10022024-NWUT-MATILDA-CVN-FH3-34.JPG",
     gallery: [
       `${CDN}/1728871847874-Y4R2WY0C1HZ9MUF0Z8FC/10022024+-+NWUT+-+MATILDA+-+CVN+-+FH3+-34.JPG`,
@@ -58,6 +61,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "the-bauhaus-project",
     title: "The Bauhaus Project",
     company: "Open Fist Theatre Company",
+    year: 2024,
     image: "/images/071624-AVT-The-Bauhaus-Project-FH3-4.JPG",
     gallery: [
       `${CDN}/1728872913614-UDF4JKIJZVZ6FBY5JVA9/071624+-+AVT+-+The+Bauhaus+Project+-+FH3-4.JPG`,
@@ -76,6 +80,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "something-rotten",
     title: "Something Rotten",
     company: "UCLA MTSI",
+    year: 2024,
     image: "/images/080124-UCLA-MTSI-SOMETHING-ROTTEN-FH3-10.JPG",
     gallery: [
       `${CDN}/f4f76582-e995-458c-991c-9445b658f239/080124+-+UCLA+MTSI+-+SOMETHING+ROTTEN+-+FH3-10.JPG`,
@@ -91,6 +96,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "a-christmas-carol",
     title: "A Christmas Carol",
     company: "Alley Theatre",
+    year: 2023,
     image: "/images/11182023-Alley-CAROL-FH3-15.JPG",
     gallery: [
       `${CDN}/1728873266039-OXL5J1T2BR2TO633QNDL/11182023+-+Alley+-+CAROL+-+FH3-15.JPG`,
@@ -106,6 +112,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "the-play-that-goes-wrong",
     title: "The Play That Goes Wrong",
     company: "Nebraska Repertory Theatre",
+    year: 2023,
     image: "/images/05022023-LNK_TPTGW-FH3-12.JPG",
     gallery: [
       `${CDN}/1683695660079-VMZ9Z329O2JQG0F7RTID/05022023-LNK_TPTGW-FH3-12.JPG`,
@@ -119,6 +126,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "musical-comedy-murders-of-1940",
     title: "Musical Comedy Murders of 1940",
     company: "Lincoln Community Playhouse",
+    year: 2023,
     image: "/images/05042023-LCP_MCM-FH3-9.JPG",
     gallery: [
       `${CDN}/47e2e4d1-bf5f-401e-901d-6da9ea6b08de/05042023-LCP_MCM-FH3-9.JPG`,
@@ -135,6 +143,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "cherry-orchard",
     title: "Cherry Orchard",
     company: "Doane University Theatre",
+    year: 2023,
     image: "/images/030723-DOANE-CHERRY-ORCHARD-FH3-55.JPG",
     credits: {
       director: "Jamie Bullins",
@@ -160,6 +169,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "stop-kiss",
     title: "Stop Kiss",
     company: "Nebraska Repertory Theatre",
+    year: 2023,
     image: "/images/022823-NRT_STOPKISS-FH3-43.JPG",
     gallery: [
       `${CDN}/625090c3-2e98-4a04-a76f-22ca18a6a8b3/022823-NRT_STOPKISS-FH3-43.JPG`,
@@ -177,6 +187,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "amahl",
     title: "Amahl",
     company: "UNL Glenn Korff School of Music",
+    year: 2022,
     image: "/images/FH3-12062022-AMAHL-11.JPG",
     gallery: [
       `${CDN}/e9eaa0a5-ff8a-4cb2-8e07-99e434e8d311/FH3-12062022-AMAHL-11.JPG`,
@@ -190,6 +201,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "student-dance-project",
     title: "Student Dance Project",
     company: "UNL Glenn Korff School of Music",
+    year: 2022,
     image: "/images/FH3-12012022-SDP-01-68.JPG",
     gallery: [
       `${CDN}/d1dc1340-a191-4bdf-8210-2af131c8df54/FH3-12012022-SDP-01-68.JPG`,
@@ -205,6 +217,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "death-of-a-salesman",
     title: "Death of a Salesman",
     company: "Nebraska Repertory Theatre",
+    year: 2022,
     image: "/images/FH3-11142022-DEATH-ALS-22.jpg",
     gallery: [
       `${CDN}/60e37f97-641c-4431-8e50-e251cfa2750c/FH3-11142022-DEATH-ALS-05.jpg`,
@@ -221,6 +234,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "perfect-arrangement",
     title: "Perfect Arrangement",
     company: "UNL Theatrix",
+    year: 2022,
     image: "/images/FH3-10312022-Perfect-Arrangement-CN-11.jpg",
     gallery: [
       `${CDN}/1728877186873-ECH5586RBSFL5WM7010O/FH3-10312022-Perfect+Arrangement-CN-11.jpg`,
@@ -235,6 +249,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "the-wilds",
     title: "The Wilds",
     company: "Lied Center",
+    year: 2022,
     image: "/images/Francisco-Hermosillo-III-100420222-The-Wilds-MH-34.jpg",
     gallery: [
       `${CDN}/2924ec27-cb9b-4f99-889b-2ed27561f3eb/Francisco-Hermosillo-III-100420222-The-Wilds-MH-34.jpg`,
@@ -251,6 +266,7 @@ export const photoProjects: PhotoProject[] = [
     slug: "shakesfear",
     title: "Shakesfear",
     company: "Nebraska Repertory Theatre",
+    year: 2022,
     image: "/images/FH3-10122022-SHAKESFEAR-MH-20.jpg",
     gallery: [
       `${CDN}/1729223541691-YYQ6TQWE88NZGMD86KYU/FH3-10122022-SHAKESFEAR-MH-20.jpg`,
