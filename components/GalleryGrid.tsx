@@ -54,6 +54,7 @@ export default function GalleryGrid({ images, title }: { images: string[]; title
 
   return (
     <>
+      <p className="font-ui text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500 mb-2">Click any photo to expand</p>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-neutral-800 mb-12">
         {images.map((src, i) => (
           <button
