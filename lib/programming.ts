@@ -4,6 +4,7 @@ export interface ProgrammingCredit {
   venue: string;
   console: string;
   year: number | string;
+  sub?: boolean;
 }
 
 export const programmingCredits: ProgrammingCredit[] = [
@@ -20,6 +21,7 @@ export const programmingCredits: ProgrammingCredit[] = [
     venue: "Daryl Roth Theatre, NYC",
     console: "ETC Eos GIO",
     year: 2025,
+    sub: true,
   },
   {
     production: "Come From Away",
@@ -34,6 +36,7 @@ export const programmingCredits: ProgrammingCredit[] = [
     venue: "Minetta Lane Theatre, NYC",
     console: "ETC Eos TI",
     year: 2025,
+    sub: true,
   },
   {
     production: "Ailey II Fall Tour Tech",
@@ -86,7 +89,7 @@ export const programmingCredits: ProgrammingCredit[] = [
   },
   {
     production: "A Midsummer Night's Dream",
-    designer: "—",
+    designer: "Abbey Lynn Smith",
     venue: "Nebraska Repertory Theatre",
     console: "MA2",
     year: 2021,
