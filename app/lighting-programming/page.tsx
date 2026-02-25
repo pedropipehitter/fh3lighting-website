@@ -7,49 +7,50 @@ export const metadata = {
 export default function LightingProgrammingPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-20">
-      <header className="mb-16">
-        <p className="text-xs font-mono tracking-[0.3em] text-[#FFCC00] uppercase mb-3">Credits</p>
+      <header className="mb-10">
         <h1 className="text-4xl font-light text-white mb-6">Lighting Programming</h1>
-        <p className="text-neutral-400 max-w-2xl leading-relaxed">
+        <p className="text-neutral-300 max-w-2xl leading-relaxed text-base">
           Experienced with ETC Eos family (APEX, GIO, TI, Ion XE), MA2, and beyond.
           Comfortable in fast-paced, high-pressure environments.
         </p>
       </header>
 
+      <p className="text-xs font-mono tracking-[0.3em] text-[#FFCC00] uppercase mb-6">Credits</p>
+
       <div className="overflow-x-auto mb-16">
-        <table className="w-full text-sm">
+        <table className="w-full text-base">
           <thead>
             <tr className="border-b border-neutral-800">
-              <th className="text-left text-xs font-mono text-neutral-600 uppercase tracking-widest pb-4 pr-8">Production</th>
-              <th className="text-left text-xs font-mono text-neutral-600 uppercase tracking-widest pb-4 pr-8">Designer</th>
-              <th className="text-left text-xs font-mono text-neutral-600 uppercase tracking-widest pb-4 pr-8">Venue</th>
-              <th className="text-left text-xs font-mono text-neutral-600 uppercase tracking-widest pb-4 pr-8">Console</th>
-              <th className="text-left text-xs font-mono text-neutral-600 uppercase tracking-widest pb-4">Year</th>
+              <th className="text-left text-xs font-mono text-neutral-400 uppercase tracking-widest pb-4 pr-8">Production</th>
+              <th className="text-left text-xs font-mono text-neutral-400 uppercase tracking-widest pb-4 pr-8">Designer</th>
+              <th className="text-left text-xs font-mono text-neutral-400 uppercase tracking-widest pb-4 pr-8">Venue</th>
+              <th className="text-left text-xs font-mono text-neutral-400 uppercase tracking-widest pb-4 pr-8">Console</th>
+              <th className="text-left text-xs font-mono text-neutral-400 uppercase tracking-widest pb-4">Year</th>
             </tr>
           </thead>
           <tbody>
             {programmingCredits.map((credit, i) => (
-              <tr key={i} className="border-b border-neutral-900 hover:bg-neutral-900/50 transition-colors">
+              <tr key={i} className="border-b border-neutral-800 hover:bg-neutral-900/50 transition-colors">
                 <td className="py-4 pr-8 text-white font-medium">
                   {credit.production}{credit.sub && <sup className="text-[#FFCC00] text-sm ml-0.5">*</sup>}
                 </td>
-                <td className="py-4 pr-8 text-neutral-400">{credit.designer}</td>
-                <td className="py-4 pr-8 text-neutral-400">{credit.venue}</td>
-                <td className="py-4 pr-8 text-neutral-500 font-mono text-xs">{credit.console}</td>
-                <td className="py-4 text-neutral-600">{credit.year}</td>
+                <td className="py-4 pr-8 text-neutral-300">{credit.designer}</td>
+                <td className="py-4 pr-8 text-neutral-300">{credit.venue}</td>
+                <td className="py-4 pr-8 text-neutral-400 font-mono text-sm">{credit.console}</td>
+                <td className="py-4 text-neutral-400">{credit.year}</td>
               </tr>
             ))}
           </tbody>
         </table>
-        <p className="text-sm text-neutral-500 font-mono mt-3">
+        <p className="text-sm text-neutral-400 font-mono mt-3">
           <sup className="text-[#FFCC00] text-sm">*</sup> Substitute programmer
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4 mb-0 mt-16">
+      <div className="grid sm:grid-cols-2 gap-4 mt-16">
         <div className="border border-neutral-800 p-8 bg-neutral-900/30">
           <p className="text-xs font-mono text-[#FFCC00] uppercase tracking-widest mb-4">Confidential Work</p>
-          <p className="text-neutral-400 leading-relaxed">
+          <p className="text-neutral-300 leading-relaxed">
             I work regularly on high-profile private and corporate events — major sporting events, exclusive galas,
             and private performances. These projects require strict confidentiality; I&apos;m well-practiced at operating
             with discretion under high-pressure, high-visibility conditions.
@@ -57,9 +58,9 @@ export default function LightingProgrammingPage() {
         </div>
         <div className="border border-neutral-800 p-8 bg-neutral-900/30">
           <p className="text-xs font-mono text-[#FFCC00] uppercase tracking-widest mb-4">Alley Theatre — 2023–2024</p>
-          <p className="text-neutral-400 leading-relaxed">
-            Served as a programming mentor for the Alley Theatre, training staff electricians in ETC Eos programming
-            as part of their rotating show duties.
+          <p className="text-neutral-300 leading-relaxed">
+            As Assistant Lighting Director at the Alley Theatre, mentoring staff electricians in ETC Eos programming
+            was part of my regular duties — training them in console operation as part of their rotating show responsibilities.
           </p>
         </div>
       </div>
