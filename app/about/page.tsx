@@ -1,8 +1,28 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { absoluteUrl } from "@/lib/seo";
 
-export const metadata = {
-  title: "About — Francisco Hermosillo III",
+export const metadata: Metadata = {
+  title: "About",
+  description: "About Francisco Hermosillo III: lighting designer, programmer, and production photographer based in New York City.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    url: "/about",
+    title: "About — Francisco Hermosillo III",
+    description:
+      "About Francisco Hermosillo III: lighting designer, programmer, and production photographer based in New York City.",
+    images: [absoluteUrl("/images/FH3-Headshot.jpg")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About — Francisco Hermosillo III",
+    description:
+      "About Francisco Hermosillo III: lighting designer, programmer, and production photographer based in New York City.",
+    images: [absoluteUrl("/images/FH3-Headshot.jpg")],
+  },
 };
 
 export default function AboutPage() {

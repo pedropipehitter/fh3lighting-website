@@ -1,7 +1,25 @@
+import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/seo";
 import { programmingCredits } from "@/lib/programming";
 
-export const metadata = {
-  title: "Lighting Programming — Francisco Hermosillo III",
+export const metadata: Metadata = {
+  title: "Lighting Programming",
+  description: "Lighting programming credits across theatre, touring, corporate, and live event productions.",
+  alternates: {
+    canonical: "/lighting-programming",
+  },
+  openGraph: {
+    url: "/lighting-programming",
+    title: "Lighting Programming — Francisco Hermosillo III",
+    description: "Lighting programming credits across theatre, touring, corporate, and live event productions.",
+    images: [absoluteUrl("/images/SNOTL129.jpg")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lighting Programming — Francisco Hermosillo III",
+    description: "Lighting programming credits across theatre, touring, corporate, and live event productions.",
+    images: [absoluteUrl("/images/SNOTL129.jpg")],
+  },
 };
 
 export default function LightingProgrammingPage() {

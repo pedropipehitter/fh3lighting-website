@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { absoluteUrl, siteConfig } from "@/lib/seo";
 
 const sections = [
   {
@@ -23,6 +25,26 @@ const sections = [
     description: "MFA Lighting Design, UNL. Freelance designer and photographer, NYC.",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    url: "/",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [absoluteUrl(siteConfig.ogImage)],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [absoluteUrl(siteConfig.ogImage)],
+  },
+};
 
 export default function Home() {
   return (
