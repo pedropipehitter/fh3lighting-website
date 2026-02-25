@@ -41,13 +41,12 @@ export default function LightingProgrammingPage() {
             ))}
           </tbody>
         </table>
+        <p className="text-xs text-neutral-600 font-mono mt-3">
+          <sup className="text-[#FFCC00]">*</sup> Substitute programmer
+        </p>
       </div>
 
-      <p className="text-xs text-neutral-600 font-mono mb-8">
-        <sup className="text-[#FFCC00]">*</sup> Substitute programmer
-      </p>
-
-      <div className="grid sm:grid-cols-2 gap-4 mb-0">
+      <div className="grid sm:grid-cols-2 gap-4 mb-0 mt-16">
         <div className="border border-neutral-800 p-8 bg-neutral-900/30">
           <p className="text-xs font-mono text-[#FFCC00] uppercase tracking-widest mb-4">Confidential Work</p>
           <p className="text-neutral-400 leading-relaxed">
