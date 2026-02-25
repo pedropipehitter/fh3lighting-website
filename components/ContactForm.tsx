@@ -1,14 +1,18 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { track } from "@vercel/analytics";
 
 export default function ContactForm() {
+  const params = useSearchParams();
+  const service = params.get("service") ?? "";
+
   return (
     <form
       action="https://formspree.io/f/mpqjklyj"
       method="POST"
       className="space-y-6"
-      onSubmit={() => track("contact_form_submit", { location: "contact_page" })}
+      onSubmit={() => track("contact_form_submit", { location: "contact_page", service })}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
@@ -45,6 +49,7 @@ export default function ContactForm() {
           id="subject"
           name="subject"
           type="text"
+          defaultValue={service}
           className="w-full bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-[0.82rem] focus:outline-none focus:border-[#FFCC00] transition-colors"
         />
       </div>
