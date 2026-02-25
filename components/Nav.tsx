@@ -20,7 +20,10 @@ export default function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#121212]/90 backdrop-blur-sm border-b border-neutral-800">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-sm font-mono tracking-widest text-neutral-400 hover:text-white transition-colors uppercase">
+        <Link
+          href="/"
+          className="font-heading text-sm font-semibold tracking-[0.12em] text-neutral-300 hover:text-white transition-colors uppercase"
+        >
           FH3
         </Link>
 
@@ -30,7 +33,7 @@ export default function Nav() {
             <Link
               key={href}
               href={href}
-              className={`text-xs tracking-wide transition-colors ${
+              className={`font-ui text-[0.64rem] uppercase tracking-[0.12em] transition-colors ${
                 pathname === href
                   ? "text-[#FFCC00]"
                   : "text-neutral-400 hover:text-white"
@@ -43,7 +46,7 @@ export default function Nav() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs tracking-wide text-neutral-400 hover:text-white transition-colors"
+            className="font-ui text-[0.64rem] uppercase tracking-[0.12em] text-neutral-400 hover:text-white transition-colors"
           >
             Resume
           </a>
@@ -52,7 +55,7 @@ export default function Nav() {
               href="https://instagram.com/PhotobyFH3"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-neutral-500 hover:text-[#FFCC00] transition-colors"
+              className="font-ui text-[0.6rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors"
             >
               IG
             </a>
@@ -60,13 +63,13 @@ export default function Nav() {
               href="https://instagram.com/fh3.lx"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-neutral-500 hover:text-[#FFCC00] transition-colors"
+              className="font-ui text-[0.6rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors"
             >
               IG LX
             </a>
             <a
               href="mailto:FH3@franciscohermosilloiii.com"
-              className="text-xs text-neutral-500 hover:text-[#FFCC00] transition-colors"
+              className="font-ui text-[0.6rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors"
             >
               Email
             </a>
@@ -98,7 +101,7 @@ export default function Nav() {
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className={`text-sm tracking-wide transition-colors ${
+              className={`font-ui text-xs uppercase tracking-[0.12em] transition-colors ${
                 pathname === href ? "text-[#FFCC00]" : "text-neutral-400 hover:text-white"
               }`}
             >
@@ -109,14 +112,14 @@ export default function Nav() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm tracking-wide text-neutral-400 hover:text-white transition-colors"
+            className="font-ui text-xs uppercase tracking-[0.12em] text-neutral-400 hover:text-white transition-colors"
           >
             Resume
           </a>
           <div className="flex gap-4 pt-2 border-t border-neutral-800">
-            <a href="https://instagram.com/PhotobyFH3" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-[#FFCC00] transition-colors">IG</a>
-            <a href="https://instagram.com/fh3.lx" target="_blank" rel="noopener noreferrer" className="text-xs text-neutral-500 hover:text-[#FFCC00] transition-colors">IG LX</a>
-            <a href="mailto:FH3@franciscohermosilloiii.com" className="text-xs text-neutral-500 hover:text-[#FFCC00] transition-colors">Email</a>
+            <a href="https://instagram.com/PhotobyFH3" target="_blank" rel="noopener noreferrer" className="font-ui text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors">IG</a>
+            <a href="https://instagram.com/fh3.lx" target="_blank" rel="noopener noreferrer" className="font-ui text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors">IG LX</a>
+            <a href="mailto:FH3@franciscohermosilloiii.com" className="font-ui text-[0.62rem] uppercase tracking-[0.1em] text-neutral-500 hover:text-[#FFCC00] transition-colors">Email</a>
           </div>
         </div>
       </div>

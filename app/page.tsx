@@ -39,26 +39,26 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/60 via-[#1a1400]/60 to-[#121212]" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-          <p className="text-xs font-mono tracking-[0.3em] text-[#FFCC00] uppercase mb-6">
+          <p className="font-ui-label text-[0.62rem] sm:text-xs text-[#FFCC00] mb-6">
             Lighting Designer · Programmer · Production Photographer
           </p>
-          <h1 className="text-5xl sm:text-7xl font-light tracking-tight text-white mb-6">
+          <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white mb-6">
             Francisco Hermosillo III
           </h1>
-          <p className="text-neutral-400 text-lg leading-relaxed mb-10">
+          <p className="text-neutral-300 text-[0.95rem] sm:text-[1.05rem] leading-relaxed mb-10">
             Freelance lighting designer, programmer, and production photographer based in NYC.
             Designing for theatre, opera, dance, and live entertainment.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link
               href="/lighting-design"
-              className="px-6 py-3 bg-[#FFCC00] hover:bg-[#ffd633] text-black text-sm tracking-wide transition-colors"
+              className="font-ui px-6 py-3 bg-[#FFCC00] hover:bg-[#ffd633] text-black text-[0.74rem] uppercase tracking-[0.12em] transition-colors"
             >
               View Work
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-3 border border-neutral-700 hover:border-neutral-500 text-neutral-300 hover:text-white text-sm tracking-wide transition-colors"
+              className="font-ui px-6 py-3 border border-neutral-700 hover:border-neutral-500 text-neutral-300 hover:text-white text-[0.74rem] uppercase tracking-[0.12em] transition-colors"
             >
               Get in Touch
             </Link>
@@ -75,11 +75,11 @@ export default function Home() {
               href={href}
               className="group bg-[#121212] p-10 hover:bg-neutral-900 transition-colors"
             >
-              <h2 className="text-xl font-light text-white mb-3 group-hover:text-[#FFCC00] transition-colors">
+              <h2 className="font-heading text-xl sm:text-2xl font-medium text-white mb-3 group-hover:text-[#FFCC00] transition-colors">
                 {title}
               </h2>
-              <p className="text-sm text-neutral-500 leading-relaxed">{description}</p>
-              <span className="inline-block mt-6 text-xs font-mono text-[#FFCC00] group-hover:text-[#FFCC00] transition-colors tracking-widest">
+              <p className="text-[0.8rem] text-neutral-500 leading-relaxed">{description}</p>
+              <span className="font-ui-label inline-block mt-6 text-[0.62rem] text-[#FFCC00] group-hover:text-[#FFCC00] transition-colors">
                 EXPLORE →
               </span>
             </Link>

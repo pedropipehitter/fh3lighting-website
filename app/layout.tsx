@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Space_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
-const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceMono.variable} font-[family-name:var(--font-space-mono)] antialiased bg-[#121212] text-[#ededed]`}>
+      <body className={`${poppins.variable} antialiased bg-[#121212] text-[#ededed]`}>
         <Nav />
         <main className="pt-16">{children}</main>
         <Analytics />

@@ -10,9 +10,9 @@ export default function ProductionPhotographyPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-20">
       <header className="mb-16">
-        <p className="text-xs font-mono tracking-[0.3em] text-[#FFCC00] uppercase mb-3">Portfolio</p>
-        <h1 className="text-4xl font-light text-white mb-4">Production Photography</h1>
-        <p className="text-neutral-500 text-sm">
+        <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-3">Portfolio</p>
+        <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-white mb-4">Production Photography</h1>
+        <p className="text-neutral-500 text-[0.8rem]">
           Work published in LA Times, LiveDesign Magazine, and Thornton Wilder Journal.
         </p>
       </header>
@@ -34,15 +34,15 @@ export default function ProductionPhotographyPage() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-neutral-700 font-mono text-xs">{project.company}</span>
+                  <span className="font-ui text-neutral-700 text-[0.62rem] uppercase tracking-[0.1em]">{project.company}</span>
                 </div>
               )}
             </div>
             <div className="p-5">
-              <h2 className="text-sm font-medium text-white group-hover:text-[#FFCC00] transition-colors mb-1">
+              <h2 className="font-heading text-[0.92rem] font-medium text-white group-hover:text-[#FFCC00] transition-colors mb-1">
                 {project.title}
               </h2>
-              <p className="text-xs text-neutral-500">{project.company}</p>
+              <p className="text-[0.72rem] text-neutral-500">{project.company}</p>
             </div>
           </Link>
         ))}

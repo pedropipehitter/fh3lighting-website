@@ -6,8 +6,8 @@ export default function LightingDesignPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-20">
       <header className="mb-16">
-        <p className="text-xs font-mono tracking-[0.3em] text-[#FFCC00] uppercase mb-3">Portfolio</p>
-        <h1 className="text-4xl font-light text-white">Lighting Design</h1>
+        <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-3">Portfolio</p>
+        <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-white">Lighting Design</h1>
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-neutral-800">
@@ -27,16 +27,16 @@ export default function LightingDesignPage() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-neutral-700 font-mono text-xs">{show.year}</span>
+                  <span className="font-ui text-neutral-700 text-[0.62rem] uppercase tracking-[0.1em]">{show.year}</span>
                 </div>
               )}
             </div>
             <div className="p-5">
-              <h2 className="text-sm font-medium text-white group-hover:text-[#FFCC00] transition-colors mb-1">
+              <h2 className="font-heading text-[0.92rem] font-medium text-white group-hover:text-[#FFCC00] transition-colors mb-1">
                 {show.title}
               </h2>
-              <p className="text-xs text-neutral-500">{show.role}</p>
-              <p className="text-xs text-neutral-600 mt-1">{show.venue} · {show.year}</p>
+              <p className="text-[0.72rem] text-neutral-500">{show.role}</p>
+              <p className="text-[0.7rem] text-neutral-600 mt-1">{show.venue} · {show.year}</p>
             </div>
           </Link>
         ))}
