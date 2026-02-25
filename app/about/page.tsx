@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import TrackedAnchor from "@/components/TrackedAnchor";
 import { absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -117,14 +118,16 @@ export default function AboutPage() {
         >
           Get in Touch
         </Link>
-        <a
+        <TrackedAnchor
+          eventName="resume_download"
+          eventData={{ location: "about_page_cta" }}
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="font-ui px-6 py-3 border border-neutral-700 hover:border-neutral-500 text-neutral-300 hover:text-white text-[0.74rem] uppercase tracking-[0.12em] transition-colors"
         >
           Download Resume
-        </a>
+        </TrackedAnchor>
       </div>
     </div>
   );
