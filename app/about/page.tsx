@@ -49,7 +49,7 @@ export default function AboutPage() {
         </div>
 
         {/* Bio */}
-        <div className="lg:col-span-2 space-y-6 text-neutral-300 leading-relaxed text-[0.9rem]">
+        <div className="lg:col-span-2 space-y-6 text-neutral-300 leading-relaxed text-[0.95rem]">
           <p>
             Francisco Hermosillo III is a freelance lighting designer, programmer, and production
             photographer based in New York City. A Mexican-American artist raised in San Pedro, Los Angeles,
@@ -88,9 +88,9 @@ export default function AboutPage() {
             { role: "Graduate Teaching Assistant", org: "University of Nebraska–Lincoln", years: "2020–2023" },
           ].map(({ role, org, years }) => (
             <div key={org} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-              <span className="font-heading text-white text-[0.9rem]">{role}</span>
-              <span className="text-neutral-500 text-[0.8rem]">{org}</span>
-              <span className="font-ui text-neutral-700 text-[0.62rem] uppercase tracking-[0.1em] sm:ml-auto">{years}</span>
+              <span className="font-heading text-white text-[0.95rem]">{role}</span>
+              <span className="text-neutral-400 text-[0.85rem]">{org}</span>
+              <span className="font-ui text-neutral-500 text-[0.7rem] uppercase tracking-[0.1em] sm:ml-auto">{years}</span>
             </div>
           ))}
         </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
       {/* Select Credits */}
       <section className="mb-16 border-t border-neutral-800 pt-12">
         <h2 className="font-ui-label text-[0.62rem] text-neutral-500 mb-8">Select Design Credits</h2>
-        <p className="text-neutral-500 text-[0.8rem] leading-relaxed">
+        <p className="text-neutral-500 text-[0.85rem] leading-relaxed">
           Lied Center · Nebraska Repertory Theatre · Glenn Korff School of Music · St. Louis Black Rep ·
           Nebraska Wesleyan University · Bluebarn Theatre · Opera Omaha · UCLA TFT
         </p>
@@ -107,7 +107,7 @@ export default function AboutPage() {
 
       <section className="mb-16 border-t border-neutral-800 pt-12">
         <h2 className="font-ui-label text-[0.62rem] text-neutral-500 mb-8">Select Programming Credits</h2>
-        <p className="text-neutral-500 text-[0.8rem] leading-relaxed">
+        <p className="text-neutral-500 text-[0.85rem] leading-relaxed">
           Daryl Roth Theatre · Minetta Lane Theatre · Northern Stage · SeaWorld Orlando · The Mirage Las Vegas · SUNY Purchase
         </p>
       </section>
