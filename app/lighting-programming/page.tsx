@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl } from "@/lib/seo";
-import { programmingCredits } from "@/lib/programming";
+import { programmingCredits, boardOpCredits } from "@/lib/programming";
 
 export const metadata: Metadata = {
   title: "Lighting Programming",
@@ -81,6 +81,33 @@ export default function LightingProgrammingPage() {
             was part of my regular duties — training them in console operation as part of their rotating show responsibilities.
           </p>
         </div>
+      </div>
+
+      <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mt-16 mb-6">Light Board Operation</p>
+
+      <div className="overflow-x-auto">
+        <table className="w-full text-[0.9rem]">
+          <thead>
+            <tr className="border-b border-neutral-800">
+              <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4 pr-8">Production</th>
+              <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4 pr-8">Designer</th>
+              <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4 pr-8">Venue</th>
+              <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4 pr-8">Role</th>
+              <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4">Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            {boardOpCredits.map((credit, i) => (
+              <tr key={i} className="border-b border-neutral-800 hover:bg-neutral-900/50 transition-colors">
+                <td className="font-heading py-4 pr-8 text-white text-[0.92rem] font-medium">{credit.production}</td>
+                <td className="py-4 pr-8 text-neutral-300 text-[0.82rem]">{credit.designer}</td>
+                <td className="py-4 pr-8 text-neutral-300 text-[0.82rem]">{credit.venue}</td>
+                <td className="font-ui py-4 pr-8 text-neutral-400 text-xs uppercase tracking-[0.1em]">{credit.role}</td>
+                <td className="py-4 text-neutral-400 text-[0.8rem]">{credit.year}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
