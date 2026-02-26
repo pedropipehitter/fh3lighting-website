@@ -18,14 +18,14 @@ export const programmingCredits: ProgrammingCredit[] = [
   {
     production: "Midwest Porn",
     designer: "Joey Moro",
-    venue: "14th Street Y Tent Theatre, NYC",
+    venue: "14th Street Y, NYC",
     console: "ETC Ion XE",
     year: 2026,
   },
   {
     production: "The Lev",
     designer: "ML Geiger",
-    venue: "14th Street Y Tent Theatre, NYC",
+    venue: "14th Street Y, NYC",
     console: "ETC Ion XE",
     year: 2026,
   },
@@ -106,13 +106,6 @@ export const programmingCredits: ProgrammingCredit[] = [
     designer: "Aja M. Jackson",
     venue: "Nebraska Repertory Theatre",
     console: "ETC Eos Classic",
-    year: 2021,
-  },
-  {
-    production: "A Midsummer Night's Dream",
-    designer: "Abbey Lynn Smith",
-    venue: "Nebraska Repertory Theatre",
-    console: "MA2",
     year: 2021,
   },
   {
