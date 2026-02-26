@@ -36,7 +36,7 @@ export default function ProductionPhotographyPage() {
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-800">
-        {photoProjects.map((project) => (
+        {photoProjects.map((project, index) => (
           <Link
             key={project.slug}
             href={`/production-photography/${project.slug}`}
@@ -48,6 +48,7 @@ export default function ProductionPhotographyPage() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  priority={index < 3}
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 />

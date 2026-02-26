@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useTransition } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Show } from "@/lib/shows";
@@ -41,6 +41,7 @@ function Select({
 export default function ShowGrid({ shows }: { shows: Show[] }) {
   const [year, setYear] = useState("");
   const [role, setRole] = useState("");
+  const [isPending, startTransition] = useTransition();
 
   const years = useMemo(
     () => [...new Set(shows.map((s) => String(s.year)))].sort((a, b) => Number(b) - Number(a)),
@@ -68,8 +69,8 @@ export default function ShowGrid({ shows }: { shows: Show[] }) {
   return (
     <>
       <div className="flex flex-wrap gap-2 mb-8">
-        <Select label="Year" value={year} onChange={setYear} options={years} />
-        <Select label="Role" value={role} onChange={setRole} options={roles} />
+        <Select label="Year" value={year} onChange={(v) => startTransition(() => setYear(v))} options={years} />
+        <Select label="Role" value={role} onChange={(v) => startTransition(() => setRole(v))} options={roles} />
         {isFiltered && (
           <button
             onClick={() => { setYear(""); setRole(""); }}
@@ -83,7 +84,7 @@ export default function ShowGrid({ shows }: { shows: Show[] }) {
       {filtered.length === 0 ? (
         <p className="text-neutral-600 text-[0.78rem]">No shows match the selected filters.</p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-neutral-800">
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-neutral-800 ${isPending ? "opacity-60" : ""}`}>
           {filtered.map((show) => (
             <Link
               key={show.slug}

@@ -67,6 +67,7 @@ export default async function ShowPage({ params }: { params: Promise<{ slug: str
             alt=""
             aria-hidden
             fill
+            quality={10}
             className="object-cover blur-2xl scale-110 opacity-40"
             sizes="(min-width: 1024px) 960px, 100vw"
           />
