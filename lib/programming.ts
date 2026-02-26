@@ -7,7 +7,7 @@ export interface BoardOpCredit {
 
 export const boardOpCredits: BoardOpCredit[] = [
   {
-    production: "The Unknowing",
+    production: "The Unknown",
     designer: "Cha See",
     venue: "Studio Seaview, NYC",
     year: 2026,
