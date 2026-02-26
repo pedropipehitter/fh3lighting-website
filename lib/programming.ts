@@ -1,3 +1,25 @@
+export interface BoardOpCredit {
+  production: string;
+  designer: string;
+  venue: string;
+  year: number | string;
+}
+
+export const boardOpCredits: BoardOpCredit[] = [
+  {
+    production: "The Unknown",
+    designer: "Cha See",
+    venue: "Studio Seaview, NYC",
+    year: 2026,
+  },
+  {
+    production: "44 the Musical",
+    designer: "Nathan Scheuer & Natali Arco",
+    venue: "Daryl Roth Theatre, NYC",
+    year: 2025,
+  },
+];
+
 export interface ProgrammingCredit {
   production: string;
   designer: string;
