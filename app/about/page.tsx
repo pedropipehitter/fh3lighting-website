@@ -80,6 +80,7 @@ export default function AboutPage() {
         <h2 className="font-ui-label text-[0.62rem] text-neutral-500 mb-8">Experience</h2>
         <div className="space-y-6">
           {[
+            { role: "Freelance Lighting Designer & Programmer", org: "FH3 Lighting", years: "2016–Present" },
             { role: "Project Engineer", org: "5 Words Media", years: "2024–2025" },
             { role: "Lighting & Projections Supervisor", org: "UCLA Theatre, Film & Television", years: "2024" },
             { role: "Assistant Lighting Design Director", org: "Alley Theatre", years: "2023–2024" },
