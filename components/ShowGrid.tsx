@@ -47,10 +47,11 @@ export default function ShowGrid({ shows }: { shows: Show[] }) {
     [shows]
   );
 
-  const roles = useMemo(
-    () => [...new Set(shows.map((s) => s.role))],
-    [shows]
-  );
+  const roles = [
+    "Lighting Designer",
+    "Associate Lighting Designer",
+    "Assistant Lighting Designer",
+  ];
 
   const filtered = useMemo(
     () =>
