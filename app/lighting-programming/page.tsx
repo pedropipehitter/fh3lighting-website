@@ -92,7 +92,6 @@ export default function LightingProgrammingPage() {
               <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4 pr-8">Production</th>
               <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4 pr-8">Designer</th>
               <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4 pr-8">Venue</th>
-              <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4 pr-8">Role</th>
               <th className="font-ui-label text-left text-[0.62rem] text-neutral-400 pb-4">Year</th>
             </tr>
           </thead>
@@ -102,7 +101,6 @@ export default function LightingProgrammingPage() {
                 <td className="font-heading py-4 pr-8 text-white text-[0.92rem] font-medium">{credit.production}</td>
                 <td className="py-4 pr-8 text-neutral-300 text-[0.82rem]">{credit.designer}</td>
                 <td className="py-4 pr-8 text-neutral-300 text-[0.82rem]">{credit.venue}</td>
-                <td className="font-ui py-4 pr-8 text-neutral-400 text-xs uppercase tracking-[0.1em]">{credit.role}</td>
                 <td className="py-4 text-neutral-400 text-[0.8rem]">{credit.year}</td>
               </tr>
             ))}
