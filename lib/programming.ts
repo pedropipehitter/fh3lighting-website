@@ -9,6 +9,27 @@ export interface ProgrammingCredit {
 
 export const programmingCredits: ProgrammingCredit[] = [
   {
+    production: "Bentley Meeker Event at The Plaza",
+    designer: "Olivia Paquet & Jaime Napolitano",
+    venue: "The Plaza Hotel, NYC",
+    console: "MA2",
+    year: 2026,
+  },
+  {
+    production: "Midwest Porn",
+    designer: "Joey Moro",
+    venue: "14th Street Y Tent Theatre, NYC",
+    console: "ETC Ion XE",
+    year: 2026,
+  },
+  {
+    production: "The Lev",
+    designer: "ML Geiger",
+    venue: "14th Street Y Tent Theatre, NYC",
+    console: "ETC Ion XE",
+    year: 2026,
+  },
+  {
     production: "O Wondrous Night",
     designer: "David Lander",
     venue: "SeaWorld Orlando (Nautilus Theatre)",
