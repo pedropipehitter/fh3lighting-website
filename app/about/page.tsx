@@ -89,7 +89,7 @@ export default function AboutPage() {
           ].map(({ role, org, years }) => (
             <div key={org} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
               <span className="font-heading text-white text-[0.95rem]">{role}</span>
-              <span className="text-neutral-400 text-[0.85rem]">{org}</span>
+              <span className="text-neutral-400 text-[0.825rem]">{org}</span>
               <span className="font-ui text-neutral-500 text-[0.7rem] uppercase tracking-[0.1em] sm:ml-auto">{years}</span>
             </div>
           ))}
