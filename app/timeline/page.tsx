@@ -134,6 +134,28 @@ export default function TimelinePage() {
           </div>
         ))}
       </div>
+
+      <div className="grid sm:grid-cols-2 gap-4 mt-16">
+        <Link
+          href="/about"
+          className="border border-neutral-800 p-8 bg-neutral-900/30 hover:border-neutral-600 hover:bg-neutral-900/60 transition-colors group"
+        >
+          <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-4">About</p>
+          <p className="text-neutral-300 leading-relaxed text-[0.82rem] group-hover:text-white transition-colors">
+            Background, approach, and the work behind the credits.
+          </p>
+        </Link>
+        <a
+          href="/resume.pdf"
+          download
+          className="border border-neutral-800 p-8 bg-neutral-900/30 hover:border-neutral-600 hover:bg-neutral-900/60 transition-colors group"
+        >
+          <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-4">Resume</p>
+          <p className="text-neutral-300 leading-relaxed text-[0.82rem] group-hover:text-white transition-colors">
+            Download a full PDF copy of my resume.
+          </p>
+        </a>
+      </div>
     </div>
   );
 }
