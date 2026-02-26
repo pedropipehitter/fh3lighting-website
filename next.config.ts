@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
         hostname: "images.squarespace-cdn.com",
         pathname: "/content/v1/**",
       },
+      {
+        protocol: "https",
+        hostname: "photos.smugmug.com",
+      },
     ],
   },
 };
