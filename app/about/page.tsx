@@ -52,16 +52,16 @@ export default function AboutPage() {
         <div className="lg:col-span-2 space-y-6 text-neutral-300 leading-relaxed text-[0.95rem]">
           <p>
             Francisco Hermosillo III is a freelance lighting designer, programmer, and production
-            photographer based in New York City. A Mexican-American artist raised in San Pedro, Los Angeles,
+            photographer based in New York City. A Mexican-American artist raised in San Pedro (Los Angeles),
             California, he holds an MFA in Lighting Design from the University
             of Nebraska&apos;s Johnny Carson School of Theatre and Film, where he studied as a Graduate
             Teaching Assistant and Hixson-Lied Fellow under the mentorship of Michelle Harvey.
           </p>
           <p>
-            His design work spans regional theatre, opera, dance, and live entertainment — from the
-            Alley Theatre and Nebraska Repertory Theatre to SeaWorld Orlando and The Mirage Las Vegas.
-            As a lighting programmer, he has worked on productions at the Daryl Roth Theatre, Minetta
-            Lane Theatre, Northern Stage, and SUNY Purchase, among others.
+            His design work spans regional theatre, opera, dance, and live entertainment, with credits
+            at the Alley Theatre, Nebraska Repertory Theatre, and beyond. His programming credits range
+            from intimate Off-Broadway houses like the Daryl Roth and Minetta Lane to large-scale live
+            entertainment at SeaWorld Orlando and The Mirage Las Vegas.
           </p>
           <p>
             His production photography has been published in the <em className="text-neutral-300">LA Times</em>,{" "}
