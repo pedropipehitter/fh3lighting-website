@@ -111,7 +111,8 @@ export default function TimelinePage() {
         </Link>
         <a
           href="/resume.pdf"
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="border border-neutral-800 p-8 bg-neutral-900/30 hover:border-neutral-600 hover:bg-neutral-900/60 transition-colors group"
         >
           <p className="font-ui-label text-[0.62rem] text-[#FFCC00] mb-4">Resume</p>
